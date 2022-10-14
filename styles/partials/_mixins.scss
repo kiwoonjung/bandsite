@@ -1,0 +1,37 @@
+@use 'variables' as *;
+
+@mixin mobile {
+    @media screen and (min-width: $mobile-breakpoint) {
+      @content;
+    }
+}
+
+@mixin tablet {
+  @media screen and (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+@font-face {
+  font-family: 'avenir-regular';
+  src: url(../assets/Font/AvenirNextLTPro-Regular.otf)
+  format('opentype');
+}
+
+@font-face {
+  font-family: 'avenir-demi';
+  src: url(../assets/Font/AvenirNextLTPro-Demi.otf)
+  format('opentype');
+}
+
+@font-face {
+  font-family: 'avenir-bold';
+  src: url(../assets/Font/AvenirNextLTPro-Bold.otf)
+  format('opentype');
+}

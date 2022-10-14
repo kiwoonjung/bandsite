@@ -1,0 +1,74 @@
+@use './partials/variables' as *;
+@use './partials/mixins' as *;
+
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.primary-header {
+    background: $main-color;
+    display: flex;
+    justify-content: center;
+}
+
+.primary-list {
+    list-style: none;
+}
+
+.site-logo {
+    background: $main-color;
+    height: 1.25rem;
+}
+
+.primary-list {
+    list-style: none;
+}
+
+.subheader-list {
+    color: #E1E1E1;
+    text-decoration: none;
+}
+.subheader-list:hover {
+    color: #FFFFFF;
+    border-bottom: 3px solid #ffffff;
+}
+
+.primary-subheader {
+    font-family: 'avenir-regular';
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.375rem;
+    display: flex;
+    justify-content: space-between;
+
+    @include tablet {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+}
+
+
+.hero-container {
+    position: relative;
+}
+
+.hero-banner {
+    background-image: url(../assets/Images/hero-bio.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 12.5rem;
+}
+
+.page-header {
+    color: #FFFFFF;
+    font-family: 'avenir-regular';
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    position: absolute;
+    bottom: 40%;
+    left: 5%;
+    
+}
