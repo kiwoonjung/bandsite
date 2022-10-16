@@ -26,9 +26,19 @@ a {
   display: block;
   justify-content: center;
 }
+@media screen and (min-width: 768px) {
+  .primary-nav {
+    display: flex;
+  }
+}
 
 .nav-list {
   list-style: none;
+}
+@media screen and (min-width: 768px) {
+  .nav-list {
+    display: flex;
+  }
 }
 
 .site-logo-container {
@@ -50,7 +60,7 @@ a {
 
 .menu-list-active,
 .menu-list:hover {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .primary-menu {
@@ -67,20 +77,20 @@ a {
   }
 }
 
-.test2 {
+.menu-container {
   width: 100%;
   padding-bottom: 0.5rem;
   display: flex;
   justify-content: center;
 }
 
-.text1 {
+.menu-block {
   display: block;
 }
 
-.test2:hover,
-.test2-active {
-  border-bottom: 4px solid #FFFFFF;
+.menu-container:hover,
+.menu-container-active {
+  border-bottom: 4px solid #ffffff;
 }
 
 .hero-image {
@@ -94,7 +104,7 @@ a {
 }
 
 .page-header-text {
-  color: #FFFFFF;
+  color: #ffffff;
   font-family: "avenir-regular";
   font-size: 1.5rem;
   line-height: 2rem;
@@ -164,8 +174,22 @@ a {
   padding-top: 1rem;
 }
 
+.body-copy-padding-side {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.body-copy-bottom-gap {
+  padding-bottom: 1rem;
+}
+
+.background-alabaster {
+  background-color: #fafafa;
+  padding-left: 1rem;
+}
+
 .section-photo {
-  padding-top: 2rem;
+  padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
@@ -249,10 +273,11 @@ a {
   background: #323232;
   padding-top: 1.5rem;
   padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .footer-header-text {
-  color: #FFFFFF;
+  color: #ffffff;
   font-family: "avenir-demi";
   font-size: 1.5rem;
   line-height: 2rem;
@@ -273,14 +298,14 @@ a {
 }
 
 .footer-bold {
-  color: #FFFFFF;
+  color: #ffffff;
   font-family: "avenir-demi";
   font-size: 0.875rem;
   line-height: 1.375rem;
 }
 
 .footer-regular {
-  color: #FFFFFF;
+  color: #ffffff;
   font-family: "avenir-regular";
   font-size: 0.875rem;
   line-height: 1.375rem;

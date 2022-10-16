@@ -35,3 +35,10 @@
   src: url(../assets/Font/AvenirNextLTPro-Bold.otf)
   format('opentype');
 }
+
+@mixin mobile-photo {
+  background-size: 90% 100%;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 10rem;
+}

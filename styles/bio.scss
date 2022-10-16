@@ -16,10 +16,16 @@ a {
     width: 100%;
     display: block;
     justify-content: center;
+        @include tablet {
+            display: flex;
+        }
 }
 
 .nav-list {
     list-style: none;
+    @include tablet {
+        display: flex;
+    }
 }
 
 .site-logo-container {
@@ -40,7 +46,7 @@ a {
 }
 .menu-list-active,
 .menu-list:hover {
-    color: #FFFFFF;
+    color: $primary-text-color;
 }
 
 .primary-menu {
@@ -56,7 +62,7 @@ a {
     }
 }
 
-.test2{
+.menu-container{
     width: 100%;
     padding-bottom: 0.5rem;
     display: flex;
@@ -64,24 +70,14 @@ a {
     
 }
 
-.text1 {
+.menu-block {
     display: block;
 }
 
-.test2:hover,
-.test2-active {
-    border-bottom: 4px solid #FFFFFF;
+.menu-container:hover,
+.menu-container-active {
+    border-bottom: 4px solid $primary-text-color;
 }
-
-// .hero-banner {
-//     width: 300px;
-//     height: 300px;
-// }
-
-// .hero-container {
-//     // margin-top: -10px;
-//     // overflow: hidden;
-// }
 
 .hero-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/Images/hero-bio.jpg);
@@ -94,7 +90,7 @@ a {
 }
 
 .page-header-text {
-    color: #FFFFFF;
+    color: $primary-text-color;
     font-family: 'avenir-regular';
     font-size: 1.5rem;
     line-height: 2rem;
@@ -165,8 +161,22 @@ a {
     padding-top: $mobile-padding-after;
 }
 
+.body-copy-padding-side {
+    padding-left: $mobile-padding-between;
+    padding-right: $mobile-padding-between;
+}
+
+.body-copy-bottom-gap {
+    padding-bottom: 1rem;
+}
+
+.background-alabaster {
+    background-color: #fafafa;
+    padding-left: $mobile-padding-between;
+}
+
 .section-photo {
-    padding-top: 2rem;
+    padding-top: 1rem;
     padding-bottom: $mobile-padding-after;
 }
 
@@ -176,88 +186,58 @@ a {
 
 .gallery-1 {
     background-image: url(../assets/Images/Photo-gallery-1.jpg);
-    background-size: 90% 100%;
-    background-repeat: no-repeat;
-    width: 100vw;
-    height: 10rem;
+    @include mobile-photo;
 }
 
 .gallery-2 {
     background-image: url(../assets/Images/Photo-gallery-2.jpg);
-    background-size: 90% 100%;
-    background-repeat: no-repeat;
-    width: 100vw;
-    height: 10rem;
+    @include mobile-photo;
 }
 
 .gallery-3 {
     background-image: url(../assets/Images/Photo-gallery-3.jpg);
-    background-size: 90% 100%;
-    background-repeat: no-repeat;
-    width: 100vw;
-    height: 10rem;
+    @include mobile-photo;
 }
 
 .gallery-4 {
     background-image: url(../assets/Images/Photo-gallery-4.jpg);
-    background-size: 90% 100%;
-    background-repeat: no-repeat;
-    width: 100vw;
-    height: 10rem;
+    @include mobile-photo;
 }
 
 .gallery-5 {
     background-image: url(../assets/Images/Photo-gallery-5.jpg);
-    background-size: 90% 100%;
-    background-repeat: no-repeat;
-    width: 100vw;
-    height: 10rem;
+    @include mobile-photo;
 }
 
 .gallery-6 {
     background-image: url(../assets/Images/Photo-gallery-6.jpg);
-    background-size: 90% 100%;
-    background-repeat: no-repeat;
-    width: 100vw;
-    height: 10rem;
+    @include mobile-photo;
 }
 
 .gallery-7 {
     background-image: url(../assets/Images/Photo-gallery-7.jpg);
-    background-size: 90% 100%;
-    background-repeat: no-repeat;
-    width: 100vw;
-    height: 10rem;
+    @include mobile-photo;
 }
 
 .gallery-8 {
     background-image: url(../assets/Images/Photo-gallery-8.jpg);
-    background-size: 90% 100%;
-    background-repeat: no-repeat;
-    width: 100vw;
-    height: 10rem;
+    @include mobile-photo;
 }
 
 .gallery-9 {
     background-image: url(../assets/Images/Photo-gallery-9.jpg);
-    background-size: 90% 100%;
-    background-repeat: no-repeat;
-    width: 100vw;
-    height: 10rem;
+    @include mobile-photo;
 }
 
 .primary-footer {
     background: $bandsite-black;
     padding-top: $mobile-padding-before;
     padding-left: $mobile-padding-between;
+    padding-right: $mobile-padding-between;
 }
 
-// .footer-header-container {
-    
-// }
-
 .footer-header-text {
-    color: #FFFFFF;
+    color: $primary-text-color;
     font-family: 'avenir-demi';
     font-size: 1.5rem;
     line-height: 2rem;
@@ -278,14 +258,14 @@ a {
 }
 
 .footer-bold {
-    color: #FFFFFF;
+    color: $primary-text-color;
     font-family: 'avenir-demi';
     font-size: 0.875rem;
     line-height: 1.375rem;
 }
 
 .footer-regular {
-    color: #FFFFFF;
+    color: $primary-text-color;
     font-family: 'avenir-regular';
     font-size: 0.875rem;
     line-height: 1.375rem;
