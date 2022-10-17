@@ -24,6 +24,10 @@ a {
         @include tablet {
             width: 50%;
         }
+
+        @include desktop {
+            width: 30%;
+        }
 }
 
 .nav-list {
@@ -106,14 +110,15 @@ a {
 .hero-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/Images/hero-bio.jpg);
     opacity: #323232 0.5;
-    background-size: 100% 100%;
+    background-size: cover;
     background-repeat: no-repeat;
-    width: 100vw;
-    height: 12.5rem;
+    min-height: 30vh;
     position: relative;
+    display: flex;
+    align-items: center;
 
         @include tablet {
-            height: 28rem;
+            min-height: 80vh;
         }
 }
 
@@ -123,13 +128,12 @@ a {
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 700;
-    position: absolute;
-    bottom: 40%;
-    left: 5%;
+    padding-left: 1rem;
 
     @include tablet {
         font-size: 3.75rem;
         line-height: 4.25rem;
+        padding-left: 2.25rem;
     }
 }
 
@@ -169,19 +173,24 @@ a {
         }
 }
 
-.band-image {
-    background-image: url(../assets/Images/band.jpg);
-    background-size: 90% 100%;
-    background-repeat: no-repeat;
-    width: 100vw;
-    height: 12rem;
-
-        @include tablet {
-            background-size: 100% 100%;
-            height: 20rem;
-            width: auto;
-        }
+.primary-band {
+    width: 100%;
+    height: auto;
 }
+
+// .band-image {
+//     background-image: url(../assets/Images/band.jpg);
+//     background-size: 90% 100%;
+//     background-repeat: no-repeat;
+//     width: 100vw;
+//     height: 12rem;
+
+//         @include tablet {
+//             background-size: 100% 100%;
+//             height: 20rem;
+//             width: auto;
+//         }
+// }
 
 .subheader-container {
     padding-top: $mobile-padding-after;
@@ -304,76 +313,18 @@ a {
         }
 }
 
-.gallery-1 {
-    background-image: url(../assets/Images/Photo-gallery-1.jpg);
-    @include mobile-photo;
-        @include tablet {
-            height: 8rem;
-        }
+.photo-container {
+    @include tablet {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 1.5rem;
+    }
 }
 
-.gallery-2 {
-    background-image: url(../assets/Images/Photo-gallery-2.jpg);
-    @include mobile-photo;
-            @include tablet {
-            height: 8rem;
-        }
-}
-
-.gallery-3 {
-    background-image: url(../assets/Images/Photo-gallery-3.jpg);
-    @include mobile-photo;
-                @include tablet {
-            height: 8rem;
-        }
-}
-
-.gallery-4 {
-    background-image: url(../assets/Images/Photo-gallery-4.jpg);
-    @include mobile-photo;
-            @include tablet {
-            height: 8rem;
-        }
-}
-
-.gallery-5 {
-    background-image: url(../assets/Images/Photo-gallery-5.jpg);
-    @include mobile-photo;
-            @include tablet {
-            height: 8rem;
-        }
-}
-
-.gallery-6 {
-    background-image: url(../assets/Images/Photo-gallery-6.jpg);
-    @include mobile-photo;
-            @include tablet {
-            height: 8rem;
-        }
-}
-
-.gallery-7 {
-    background-image: url(../assets/Images/Photo-gallery-7.jpg);
-    @include mobile-photo;
-            @include tablet {
-            height: 8rem;
-        }
-}
-
-.gallery-8 {
-    background-image: url(../assets/Images/Photo-gallery-8.jpg);
-    @include mobile-photo;
-            @include tablet {
-            height: 8rem;
-        }
-}
-
-.gallery-9 {
-    background-image: url(../assets/Images/Photo-gallery-9.jpg);
-    @include mobile-photo;
-            @include tablet {
-            height: 8rem;
-        }
+.primary-photo {
+    width: 100%;
+    height: auto;
+    padding-bottom: 2rem;
 }
 
 .primary-footer {
