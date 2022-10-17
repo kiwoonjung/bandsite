@@ -37,8 +37,13 @@
 }
 
 @mixin mobile-photo {
-  background-size: 90% 100%;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
-  width: 100vw;
-  height: 10rem;
+  height: 10rem; 
+}
+
+@mixin tablet-photo {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 8rem; 
 }

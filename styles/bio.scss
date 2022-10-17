@@ -11,27 +11,40 @@ a {
     text-decoration: none;
 }
 
-.primary-nav {
+.primary-header {
     background: $bandsite-black;
     width: 100%;
-    display: block;
+}
+
+.primary-nav {
+    width: 100%;
+    display: inline-block;
     justify-content: center;
+
         @include tablet {
-            display: flex;
+            width: 50%;
         }
 }
 
 .nav-list {
     list-style: none;
-    @include tablet {
-        display: flex;
-    }
+
+        @include tablet {
+            display: flex;
+            align-items: center;
+        }
 }
 
 .site-logo-container {
     display: flex;
     justify-content: center;
     padding-top: 1rem;
+        @include tablet {
+        padding-top: 1rem;
+        padding-left: 2.2rem;
+        padding-bottom: 1rem;
+        padding-right: 3.75rem;
+        }
 }
 
 .site-logo {
@@ -43,7 +56,12 @@ a {
     list-style: none;
     color: #E1E1E1;
     text-decoration: none;
+
+        @include tablet {
+            padding-top: 0.938rem;
+        }
 }
+
 .menu-list-active,
 .menu-list:hover {
     color: $primary-text-color;
@@ -57,8 +75,9 @@ a {
     display: flex;
 
     @include tablet {
-        font-size: 1.5rem;
-        line-height: 2rem;
+        width: 50%;
+        display: inline-flex;
+        font-size: 0.813rem;
     }
 }
 
@@ -67,16 +86,21 @@ a {
     padding-bottom: 0.5rem;
     display: flex;
     justify-content: center;
-    
 }
 
 .menu-block {
     display: block;
+    padding-top: 0.938rem;
+    padding-bottom: 0.875rem;
 }
 
 .menu-container:hover,
 .menu-container-active {
     border-bottom: 4px solid $primary-text-color;
+    
+    @include tablet {
+        width: 50%;
+    }
 }
 
 .hero-image {
@@ -87,6 +111,10 @@ a {
     width: 100vw;
     height: 12.5rem;
     position: relative;
+
+        @include tablet {
+            height: 28rem;
+        }
 }
 
 .page-header-text {
@@ -98,17 +126,34 @@ a {
     position: absolute;
     bottom: 40%;
     left: 5%;
+
+    @include tablet {
+        font-size: 3.75rem;
+        line-height: 4.25rem;
+    }
 }
 
 .section-container {
     padding-top: $mobile-padding-before;
     padding-left: $mobile-padding-after;
+    
+        @include tablet {
+            padding-top: $tablet-padding-before;
+            padding-left: $tablet-padding-after;
+
+        
+        }
 
     &-text {
         font-family: 'avenir-regular';
         font-size: 1.5rem;
         line-height: 2rem;
         font-weight: 700;
+
+        @include tablet {
+            font-size: 2.25rem;
+            line-height: 2.75rem;
+        }
     }
 }
 
@@ -116,6 +161,12 @@ a {
     padding-top: $mobile-padding-after;
     padding-left: $mobile-padding-between;
     padding-right: $mobile-padding-between;
+
+        @include tablet {
+            padding-top: $tablet-padding-after;
+            padding-left: 5rem;
+            padding-right: 5rem;
+        }
 }
 
 .band-image {
@@ -124,12 +175,23 @@ a {
     background-repeat: no-repeat;
     width: 100vw;
     height: 12rem;
+
+        @include tablet {
+            background-size: 100% 100%;
+            height: 20rem;
+            width: auto;
+        }
 }
 
 .subheader-container {
     padding-top: $mobile-padding-after;
     padding-left: $mobile-padding-between;
     padding-right: $mobile-padding-between;
+
+        @include tablet {
+            padding-left: 5rem;
+            padding-right: 5rem;
+        }
 }
 
 .subheader-gap {
@@ -140,6 +202,20 @@ a {
     font-family: 'avenir-demi';
     font-size: 0.875rem;
     line-height: 1.375rem;
+
+        @include tablet {
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
+}
+
+.subheader-tablet {
+    @include tablet {
+            font-family: 'avenir-regular';
+            font-size: 1.125rem;
+            line-height: 2rem;
+            font-weight: 700;
+    }
 }
 
 .subheader-regular {
@@ -149,21 +225,47 @@ a {
     font-weight: 600;
     padding-top: $mobile-padding-before;
     padding-bottom: $mobile-padding-after;
+
+        @include tablet {
+            font-family: 'avenir-demi';
+            font-size: 1.5rem;
+            line-height: 2rem;
+            padding-top: $tablet-padding-before;
+            padding-bottom: $tablet-padding-after;
+        }
+}
+
+.body-container {
+
+    @include tablet {
+        display: flex;
+        gap: 25px;
+    }
 }
 
 .body-copy {
     font-family: 'avenir-regular';
     font-size: 0.813rem;
     line-height: 1.125rem;
+
+        @include tablet {
+            font-size: 0.875rem;
+            line-height: 1.375rem;
+        }
 }
 
 .body-copy-padding {
-    padding-top: $mobile-padding-after;
+    padding-bottom: $mobile-padding-after;
 }
 
 .body-copy-padding-side {
     padding-left: $mobile-padding-between;
     padding-right: $mobile-padding-between;
+
+        @include tablet {
+            padding-right: 5rem;
+            padding-left: 5rem;
+        }
 }
 
 .body-copy-bottom-gap {
@@ -173,6 +275,19 @@ a {
 .background-alabaster {
     background-color: #fafafa;
     padding-left: $mobile-padding-between;
+    padding-right: $mobile-padding-between;
+
+        @include tablet {
+            padding-left: $tablet-padding-after;
+            padding-right: $tablet-padding-after;
+        }
+}
+
+.photo-gallery-container{
+    @include tablet {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .section-photo {
@@ -182,51 +297,83 @@ a {
 
 .gallery-image-container {
     padding-bottom: $mobile-padding-after;
+
+        @include tablet {
+            width: 31.5%;
+            display: inline-block;
+        }
 }
 
 .gallery-1 {
     background-image: url(../assets/Images/Photo-gallery-1.jpg);
     @include mobile-photo;
+        @include tablet {
+            height: 8rem;
+        }
 }
 
 .gallery-2 {
     background-image: url(../assets/Images/Photo-gallery-2.jpg);
     @include mobile-photo;
+            @include tablet {
+            height: 8rem;
+        }
 }
 
 .gallery-3 {
     background-image: url(../assets/Images/Photo-gallery-3.jpg);
     @include mobile-photo;
+                @include tablet {
+            height: 8rem;
+        }
 }
 
 .gallery-4 {
     background-image: url(../assets/Images/Photo-gallery-4.jpg);
     @include mobile-photo;
+            @include tablet {
+            height: 8rem;
+        }
 }
 
 .gallery-5 {
     background-image: url(../assets/Images/Photo-gallery-5.jpg);
     @include mobile-photo;
+            @include tablet {
+            height: 8rem;
+        }
 }
 
 .gallery-6 {
     background-image: url(../assets/Images/Photo-gallery-6.jpg);
     @include mobile-photo;
+            @include tablet {
+            height: 8rem;
+        }
 }
 
 .gallery-7 {
     background-image: url(../assets/Images/Photo-gallery-7.jpg);
     @include mobile-photo;
+            @include tablet {
+            height: 8rem;
+        }
 }
 
 .gallery-8 {
     background-image: url(../assets/Images/Photo-gallery-8.jpg);
     @include mobile-photo;
+            @include tablet {
+            height: 8rem;
+        }
 }
 
 .gallery-9 {
     background-image: url(../assets/Images/Photo-gallery-9.jpg);
     @include mobile-photo;
+            @include tablet {
+            height: 8rem;
+        }
 }
 
 .primary-footer {
@@ -234,6 +381,16 @@ a {
     padding-top: $mobile-padding-before;
     padding-left: $mobile-padding-between;
     padding-right: $mobile-padding-between;
+}
+
+.footer-container-1 {
+    
+    @include tablet {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+    }
 }
 
 .footer-header-text {
@@ -245,8 +402,42 @@ a {
 
 .footer-icon {
     padding-top: $mobile-padding-after;
-    display: flex;
+    display: inline-flex;
     gap: 2rem;
+
+        @include tablet {
+            padding-top: 0;
+            margin-right: 6.25rem;
+        }
+}
+
+.bottom-logo-container {
+    @include tablet {
+        display: inline-flex;
+        justify-content: flex-end;
+    }
+}
+
+.tablet-bottom-logo {
+    display: none;
+
+        @include tablet {
+            display: flex;
+        }
+}
+
+.primary-footer-container {
+
+    @include tablet {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.footer-container-2 {
+    @include tablet {
+        display: flex
+    }
 }
 
 .footer-icon-list {
@@ -262,6 +453,11 @@ a {
     font-family: 'avenir-demi';
     font-size: 0.875rem;
     line-height: 1.375rem;
+
+        @include tablet {
+            font-size: 0.875rem;
+            line-height: 1.375rem;
+        }
 }
 
 .footer-regular {
@@ -271,6 +467,19 @@ a {
     line-height: 1.375rem;
 }
 
+.site-logo-bottom {
+    background: $bandsite-black;
+    height: 1.25rem;
+
+        @include tablet {
+            display: none;
+        }
+}
+
 .footer-logo-container{
     padding-top: 3.5rem;
+
+        @include tablet {
+            padding-top: 1rem;
+        }
 }
