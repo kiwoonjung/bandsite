@@ -237,29 +237,61 @@ a {
     }
 }
 
-.subheader-regular {
-    font-family: 'avenir-regular';
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-    font-weight: 600;
-    padding-top: $mobile-padding-before;
-    padding-bottom: $mobile-padding-after;
+// .subheader-regular {
+//     font-family: 'avenir-regular';
+//     font-size: 0.875rem;
+//     line-height: 1.375rem;
+//     font-weight: 600;
+//     padding-top: $mobile-padding-before;
+//     padding-bottom: $mobile-padding-after;
+
+//         @include tablet {
+//             font-family: 'avenir-demi';
+//             font-size: 1.5rem;
+//             line-height: 2rem;
+//             padding-top: $tablet-padding-before;
+//             padding-bottom: $tablet-padding-after;
+//         }
+// }
+
+// .body-container {
+
+//     @include tablet {
+//         display: flex;
+//         gap: 25px;
+//     }
+// }
+
+.body__container {
+    padding-left: $mobile-padding-between;
+    padding-right: $mobile-padding-between;
 
         @include tablet {
-            font-family: 'avenir-demi';
-            font-size: 1.5rem;
-            line-height: 2rem;
-            padding-top: $tablet-padding-before;
-            padding-bottom: $tablet-padding-after;
+            padding-right: 5rem;
+            padding-left: 5rem;
         }
-}
 
-.body-container {
+        @include desktop {
+            padding-right:10rem;
+            padding-left:10rem;
+        }
 
-    @include tablet {
-        display: flex;
-        gap: 25px;
-    }
+            &__subheader {
+                font-family: 'avenir-regular';
+                font-size: 0.875rem;
+                line-height: 1.375rem;
+                font-weight: 600;
+                padding-top: $mobile-padding-before;
+                padding-bottom: $mobile-padding-after;
+            
+                    @include tablet {
+                        font-family: 'avenir-demi';
+                        font-size: 1.5rem;
+                        line-height: 2rem;
+                        padding-top: $tablet-padding-before;
+                        padding-bottom: $tablet-padding-after;
+                    }
+            }
 }
 
 .body-copy {

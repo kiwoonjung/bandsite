@@ -270,6 +270,23 @@ a {
   }
 }
 
+.body__padding-side {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .body__padding-side {
+    padding-right: 5rem;
+    padding-left: 5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .body__padding-side {
+    padding-right: 10rem;
+    padding-left: 10rem;
+  }
+}
+
 .body-copy {
   font-family: "avenir-regular";
   font-size: 0.813rem;
