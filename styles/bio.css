@@ -24,6 +24,11 @@ a {
   background: #323232;
   width: 100%;
 }
+@media screen and (min-width: 768px) {
+  .primary-header {
+    padding-top: 0.6rem;
+  }
+}
 
 .primary-nav {
   width: 100%;
@@ -47,7 +52,6 @@ a {
 @media screen and (min-width: 768px) {
   .nav-list {
     display: flex;
-    align-items: center;
   }
 }
 
@@ -62,6 +66,11 @@ a {
     padding-left: 2.2rem;
     padding-bottom: 1rem;
     padding-right: 3.75rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .site-logo-container {
+    padding-left: 5rem;
   }
 }
 
@@ -156,6 +165,11 @@ a {
     padding-left: 2.25rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .page-header-text {
+    padding-left: 5rem;
+  }
+}
 
 .section-container {
   padding-top: 1.5rem;
@@ -165,6 +179,11 @@ a {
   .section-container {
     padding-top: 3rem;
     padding-left: 2.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .section-container {
+    padding-left: 5rem;
   }
 }
 .section-container-text {
@@ -192,6 +211,12 @@ a {
     padding-right: 5rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .band-image-container {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+}
 
 .primary-band {
   width: 100%;
@@ -207,6 +232,12 @@ a {
   .subheader-container {
     padding-left: 5rem;
     padding-right: 5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .subheader-container {
+    padding-right: 25.1rem;
+    padding-left: 10rem;
   }
 }
 
@@ -275,6 +306,11 @@ a {
 .body-copy-padding {
   padding-bottom: 1rem;
 }
+@media screen and (min-width: 768px) {
+  .body-copy-padding {
+    padding-bottom: 2.25rem;
+  }
+}
 
 .body-copy-padding-side {
   padding-left: 1rem;
@@ -284,6 +320,12 @@ a {
   .body-copy-padding-side {
     padding-right: 5rem;
     padding-left: 5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .body-copy-padding-side {
+    padding-right: 10rem;
+    padding-left: 10rem;
   }
 }
 
@@ -302,6 +344,12 @@ a {
     padding-right: 2.25rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .background-alabaster {
+    padding-right: 10rem;
+    padding-left: 10rem;
+  }
+}
 
 @media screen and (min-width: 768px) {
   .photo-gallery-container {
@@ -313,6 +361,12 @@ a {
 .section-photo {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .section-photo {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
 }
 
 .gallery-image-container {
@@ -345,6 +399,21 @@ a {
   padding-left: 1rem;
   padding-right: 1rem;
 }
+@media screen and (min-width: 768px) {
+  .primary-footer {
+    padding-top: 3rem;
+    padding-right: 2.25rem;
+    padding-left: 2.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .primary-footer {
+    padding-top: 3rem;
+    padding-right: 10rem;
+    padding-bottom: 3rem;
+    padding-left: 10rem;
+  }
+}
 
 @media screen and (min-width: 768px) {
   .footer-container-1 {
@@ -370,7 +439,6 @@ a {
 @media screen and (min-width: 768px) {
   .footer-icon {
     padding-top: 0;
-    margin-right: 6.25rem;
   }
 }
 
@@ -393,7 +461,15 @@ a {
 @media screen and (min-width: 768px) {
   .primary-footer-container {
     display: flex;
-    justify-content: space-between;
+    gap: 4rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer-header-container {
+    display: flex;
+    align-items: center;
+    gap: 7.3rem;
   }
 }
 
