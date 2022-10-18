@@ -11,107 +11,107 @@ a {
     text-decoration: none;
 }
 
-.primary-header {
+.main-nav {
     background: $bandsite-black;
     width: 100%;
     
         @include tablet {
             padding-top: 0.6rem;
         }
-}
+    
+    &__container {
+        width: 100%;
+        display: inline-block;
+        justify-content: center;
+    
+            @include tablet {
+                width: 50%;
+            }
+    
+            @include desktop {
+                width: 30%;
+            }
+    }
 
-.primary-nav {
-    width: 100%;
-    display: inline-block;
-    justify-content: center;
+    &__item {
+        list-style: none;
 
-        @include tablet {
-            width: 50%;
-        }
+            &--container {
+                display: flex;
+                justify-content: center;
+                padding-top: 1rem;
+                    @include tablet {
+                    padding-top: 1rem;
+                    padding-left: 2.2rem;
+                    padding-bottom: 1rem;
+                    padding-right: 3.75rem;
+                    }
+            
+                    @include desktop {
+                        padding-left: 5rem;
+                    }
+            }
 
-        @include desktop {
-            width: 30%;
-        }
-}
-
-.nav-list {
-    list-style: none;
+            &--logo {
+                background: $bandsite-black;
+                height: 1.25rem;
+            }
 
         @include tablet {
             display: flex;
         }
+    }
 }
 
-.site-logo-container {
-    display: flex;
-    justify-content: center;
-    padding-top: 1rem;
-        @include tablet {
-        padding-top: 1rem;
-        padding-left: 2.2rem;
-        padding-bottom: 1rem;
-        padding-right: 3.75rem;
-        }
-
-        @include desktop {
-            padding-left: 5rem;
-        }
-}
-
-.site-logo {
-    background: $bandsite-black;
-    height: 1.25rem;
-}
-
-.menu-list {
-    list-style: none;
-    color: #E1E1E1;
-    text-decoration: none;
-
-        @include tablet {
-            padding-top: 0.938rem;
-        }
-}
-
-.menu-list-active,
-.menu-list:hover {
-    color: $primary-text-color;
-}
-
-.primary-menu {
+.sub-nav {
     font-family: 'avenir-regular';
     font-size: 0.875rem;
     font-weight: 600;
     line-height: 1.375rem;
     display: flex;
 
-    @include tablet {
-        width: 50%;
-        display: inline-flex;
-        font-size: 0.813rem;
-    }
-}
+        @include tablet {
+            width: 50%;
+            display: inline-flex;
+            font-size: 0.813rem;
+        }
 
-.menu-container{
-    width: 100%;
-    padding-bottom: 0.5rem;
-    display: flex;
-    justify-content: center;
-}
+        &__container {
+            width: 100%;
+            padding-bottom: 0.5rem;
+            display: flex;
+            justify-content: center;
 
-.menu-block {
-    display: block;
-    padding-top: 0.938rem;
-    padding-bottom: 0.875rem;
-}
-
-.menu-container:hover,
-.menu-container-active {
-    border-bottom: 4px solid $primary-text-color;
+            &--active,
+            &:hover {
+                border-bottom: 4px solid $primary-text-color;
     
-    @include tablet {
-        width: 50%;
-    }
+                // @include tablet {
+                //     width: 50%;
+                // }
+            }
+        }
+
+        &__block {
+            display: block;
+            padding-top: 0.938rem;
+            padding-bottom: 0.875rem;
+
+                &--list {
+                    list-style: none;
+                    color: #E1E1E1;
+                    text-decoration: none;
+
+                    &--active,
+                    &:hover {
+                        color: $primary-text-color;
+                    }
+                
+                        @include tablet {
+                            padding-top: 0.938rem;
+                        }
+                }
+        }
 }
 
 .hero-image {
@@ -127,27 +127,25 @@ a {
         @include tablet {
             min-height: 80vh;
         }
-}
 
-.page-header-text {
-    color: $primary-text-color;
-    font-family: 'avenir-regular';
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-weight: 700;
-    padding-left: 1rem;
-
-        @include tablet {
-            font-size: 3.75rem;
-            line-height: 4.25rem;
-            padding-left: 2.25rem;
-        }
-
-        @include desktop {
-            padding-left: 5rem;
-        }
-
-    
+            &__text {
+                color: $primary-text-color;
+                font-family: 'avenir-regular';
+                font-size: 1.5rem;
+                line-height: 2rem;
+                font-weight: 700;
+                padding-left: 1rem;
+            
+                    @include tablet {
+                        font-size: 3.75rem;
+                        line-height: 4.25rem;
+                        padding-left: 2.25rem;
+                    }
+            
+                    @include desktop {
+                        padding-left: 5rem;
+                    }
+            }
 }
 
 .section-container {
@@ -176,7 +174,7 @@ a {
     }
 }
 
-.band-image-container {
+.band-image__container {
     padding-top: $mobile-padding-after;
     padding-left: $mobile-padding-between;
     padding-right: $mobile-padding-between;
@@ -191,14 +189,14 @@ a {
             padding-left: 10rem;
             padding-right: 10rem;
         }
+
+            &--photo {
+                width: 100%;
+                height: auto;
+            }
 }
 
-.primary-band {
-    width: 100%;
-    height: auto;
-}
-
-.subheader-container {
+.subheader__container {
     padding-top: $mobile-padding-after;
     padding-left: $mobile-padding-between;
     padding-right: $mobile-padding-between;
@@ -212,21 +210,22 @@ a {
             padding-right: 25.1rem;
             padding-left: 10rem;
         }
-}
 
-.subheader-gap {
-    padding-top: 1rem;
-}
+            &--text {
+                font-family: 'avenir-demi';
+                font-size: 0.875rem;
+                line-height: 1.375rem;
+            
+                    @include tablet {
+                        font-size: 1.5rem;
+                        line-height: 2rem;
+                    }
+            }
+                
+            &--gap {
+                padding-top: 1rem
+            }
 
-.subheader {
-    font-family: 'avenir-demi';
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-
-        @include tablet {
-            font-size: 1.5rem;
-            line-height: 2rem;
-        }
 }
 
 .subheader-tablet {
