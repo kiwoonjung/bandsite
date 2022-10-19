@@ -20,313 +20,274 @@ a {
   text-decoration: none;
 }
 
-.main-nav {
-  background: #323232;
-  width: 100%;
-}
-@media screen and (min-width: 768px) {
-  .main-nav {
-    padding-top: 0.6rem;
-  }
-}
-.main-nav__container {
-  width: 100%;
-  display: inline-block;
-  justify-content: center;
-}
-@media screen and (min-width: 768px) {
-  .main-nav__container {
-    width: 50%;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .main-nav__container {
-    width: 30%;
-  }
-}
-.main-nav__item {
+li {
   list-style: none;
 }
-.main-nav__item--container {
-  display: flex;
-  justify-content: center;
-  padding-top: 1rem;
+
+h1 {
+  color: #FFFFFF;
+  font-family: "avenir-demi";
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 @media screen and (min-width: 768px) {
-  .main-nav__item--container {
-    padding-top: 1rem;
-    padding-left: 2.2rem;
-    padding-bottom: 1rem;
-    padding-right: 3.75rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .main-nav__item--container {
-    padding-left: 5rem;
-  }
-}
-.main-nav__item--logo {
-  background: #323232;
-  height: 1.25rem;
-}
-@media screen and (min-width: 768px) {
-  .main-nav__item {
-    display: flex;
+  h1 {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
   }
 }
 
-.sub-nav {
-  font-family: "avenir-regular";
-  font-size: 0.875rem;
-  font-weight: 600;
-  line-height: 1.375rem;
-  display: flex;
+h2 {
+  font-family: "avenir-demi";
+  font-size: 1.5rem;
 }
 @media screen and (min-width: 768px) {
-  .sub-nav {
-    width: 50%;
-    display: inline-flex;
-    font-size: 0.813rem;
+  h2 {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
   }
 }
-.sub-nav__container {
+
+h3 {
+  font-family: "avenir-demi";
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+@media screen and (min-width: 768px) {
+  h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+h4 {
+  font-family: "avenir-regular";
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+}
+@media screen and (min-width: 768px) {
+  h4 {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+
+h5 {
+  font-family: "avenir-regular";
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+}
+@media screen and (min-width: 768px) {
+  h5 {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+h6 {
+  font-family: "avenir-regular";
+  font-size: 0.625rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  h6 {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+  }
+}
+
+.header {
+  background-color: #323232;
   width: 100%;
-  padding-bottom: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    display: flex;
+    align-items: flex-end;
+    padding-top: 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .primary-nav {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    align-items: baseline;
+  }
+}
+
+.logo {
   display: flex;
   justify-content: center;
-}
-.sub-nav__container--active, .sub-nav__container:hover {
-  border-bottom: 4px solid #ffffff;
-}
-.sub-nav__block {
-  display: block;
-  padding-top: 0.938rem;
-  padding-bottom: 0.875rem;
-}
-.sub-nav__block--list {
-  list-style: none;
-  color: #E1E1E1;
-  text-decoration: none;
-}
-.sub-nav__block--list--active, .sub-nav__block--list:hover {
-  color: #ffffff;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 @media screen and (min-width: 768px) {
-  .sub-nav__block--list {
-    padding-top: 0.938rem;
+  .logo {
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
   }
+}
+@media screen and (min-width: 1280px) {
+  .logo {
+    padding-left: 5rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .logo-padding {
+    padding-bottom: 0.5rem;
+  }
+}
+
+.list__item {
+  display: flex;
+}
+@media screen and (min-width: 768px) {
+  .list__item {
+    display: flex;
+    gap: 4rem;
+  }
+}
+.list__link {
+  color: #AFAFAF;
+  width: 50%;
+  display: grid;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+.list__link--active, .list__link:hover {
+  color: #FFFFFF;
+  border-bottom: 4px solid #FFFFFF;
 }
 
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/Images/hero-bio.jpg);
-  opacity: #323232 0.5;
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 30vh;
   position: relative;
   display: flex;
   align-items: center;
-}
-@media screen and (min-width: 768px) {
-  .hero-image {
-    min-height: 80vh;
-  }
-}
-.hero-image__text {
-  color: #ffffff;
-  font-family: "avenir-regular";
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 700;
   padding-left: 1rem;
 }
 @media screen and (min-width: 768px) {
-  .hero-image__text {
+  .hero-image {
+    min-height: 45vh;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero-image {
     font-size: 3.75rem;
     line-height: 4.25rem;
     padding-left: 2.25rem;
   }
 }
 @media screen and (min-width: 1280px) {
-  .hero-image__text {
+  .hero-image {
     padding-left: 5rem;
   }
 }
 
-.section-container {
+.band-image {
+  width: 100%;
+  height: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .band-image {
+    padding-top: 2.25rem;
+    padding-bottom: 2.25rem;
+  }
+}
+
+.body-container {
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .body-container {
+    padding-right: 5rem;
+    padding-left: 5rem;
+    padding-bottom: 2.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .body-container {
+    padding-right: 10rem;
+    padding-left: 10rem;
+    padding-bottom: 2.25rem;
+  }
+}
+
+.band-title {
   padding-top: 1.5rem;
   padding-left: 1rem;
 }
 @media screen and (min-width: 768px) {
-  .section-container {
+  .band-title {
     padding-top: 3rem;
     padding-left: 2.25rem;
   }
 }
 @media screen and (min-width: 1280px) {
-  .section-container {
+  .band-title {
     padding-left: 5rem;
-  }
-}
-.section-container-text {
-  font-family: "avenir-regular";
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 700;
-}
-@media screen and (min-width: 768px) {
-  .section-container-text {
-    font-size: 2.25rem;
-    line-height: 2.75rem;
   }
 }
 
-.band-image__container {
-  padding-top: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-@media screen and (min-width: 768px) {
-  .band-image__container {
-    padding-top: 2.25rem;
-    padding-left: 5rem;
-    padding-right: 5rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .band-image__container {
-    padding-left: 10rem;
-    padding-right: 10rem;
-  }
-}
-.band-image__container--photo {
-  width: 100%;
-  height: auto;
-}
-
-.subheader__container {
-  padding-top: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-@media screen and (min-width: 768px) {
-  .subheader__container {
-    padding-left: 5rem;
-    padding-right: 5rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .subheader__container {
-    padding-right: 25.1rem;
-    padding-left: 10rem;
-  }
-}
-.subheader__container--text {
+.body-text-1 {
   font-family: "avenir-demi";
-  font-size: 0.875rem;
-  line-height: 1.375rem;
+  line-height: 1.5rem;
+  padding-bottom: 0.5rem;
 }
 @media screen and (min-width: 768px) {
-  .subheader__container--text {
+  .body-text-1 {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
-.subheader__container--gap {
+
+@media screen and (min-width: 768px) {
+  .body-tablet {
+    display: flex;
+    gap: 1.563rem;
+  }
+}
+
+.band-text-2 {
+  font-family: "avenir-demi";
+  padding-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .band-text-2 {
+    padding-bottom: 2.25rem;
+  }
+}
+
+.body-text-1 {
+  font-family: "avenir-regular";
+  font-weight: bold;
+}
+@media screen and (min-width: 1280px) {
+  .body-text-1 {
+    padding-right: 16rem;
+  }
+}
+
+.body-text-2 {
   padding-top: 1rem;
 }
-
 @media screen and (min-width: 768px) {
-  .subheader-tablet {
-    font-family: "avenir-regular";
-    font-size: 1.125rem;
-    line-height: 2rem;
-    font-weight: 700;
+  .body-text-2 {
+    padding-top: 2.25rem;
   }
-}
-
-.subheader-regular {
-  font-family: "avenir-regular";
-  font-size: 0.875rem;
-  line-height: 1.375rem;
-  font-weight: 600;
-  padding-top: 1.5rem;
-  padding-bottom: 1rem;
-}
-@media screen and (min-width: 768px) {
-  .subheader-regular {
-    font-family: "avenir-demi";
-    font-size: 1.5rem;
-    line-height: 2rem;
-    padding-top: 3rem;
-    padding-bottom: 2.25rem;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .body-container {
-    display: flex;
-    gap: 25px;
-  }
-}
-
-.body__padding-side {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-@media screen and (min-width: 768px) {
-  .body__padding-side {
-    padding-right: 5rem;
-    padding-left: 5rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .body__padding-side {
-    padding-right: 10rem;
-    padding-left: 10rem;
-  }
-}
-
-.body-copy {
-  font-family: "avenir-regular";
-  font-size: 0.813rem;
-  line-height: 1.125rem;
-}
-@media screen and (min-width: 768px) {
-  .body-copy {
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-  }
-}
-
-.body-copy-padding {
-  padding-bottom: 1rem;
-}
-@media screen and (min-width: 768px) {
-  .body-copy-padding {
-    padding-bottom: 2.25rem;
-  }
-}
-
-.body-copy-padding-side {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-@media screen and (min-width: 768px) {
-  .body-copy-padding-side {
-    padding-right: 5rem;
-    padding-left: 5rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .body-copy-padding-side {
-    padding-right: 10rem;
-    padding-left: 10rem;
-  }
-}
-
-.body-copy-bottom-gap {
-  padding-bottom: 1rem;
 }
 
 .background-alabaster {
@@ -338,12 +299,14 @@ a {
   .background-alabaster {
     padding-left: 2.25rem;
     padding-right: 2.25rem;
+    padding-bottom: 2.25rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .background-alabaster {
-    padding-right: 10rem;
-    padding-left: 10rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-bottom: 2.25rem;
   }
 }
 
@@ -386,7 +349,7 @@ a {
 .primary-photo {
   width: 100%;
   height: auto;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
 .primary-footer {
@@ -405,9 +368,9 @@ a {
 @media screen and (min-width: 1280px) {
   .primary-footer {
     padding-top: 3rem;
-    padding-right: 10rem;
+    padding-right: 5rem;
     padding-bottom: 3rem;
-    padding-left: 10rem;
+    padding-left: 5rem;
   }
 }
 
@@ -457,7 +420,7 @@ a {
 @media screen and (min-width: 768px) {
   .primary-footer-container {
     display: flex;
-    gap: 4rem;
+    gap: 3.5rem;
   }
 }
 
@@ -465,7 +428,7 @@ a {
   .footer-header-container {
     display: flex;
     align-items: center;
-    gap: 7.3rem;
+    gap: 6.9rem;
   }
 }
 
