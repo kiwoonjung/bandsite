@@ -10,7 +10,9 @@
   font-family: "avenir-bold";
   src: url(../assets/Font/AvenirNextLTPro-Bold.otf) format("opentype");
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -177,34 +179,6 @@ h6 {
   border-bottom: 4px solid #FFFFFF;
 }
 
-.hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/Images/hero-bio.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 30vh;
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding-left: 1rem;
-}
-@media screen and (min-width: 768px) {
-  .hero-image {
-    min-height: 45vh;
-  }
-}
-@media screen and (min-width: 768px) {
-  .hero-image {
-    font-size: 3.75rem;
-    line-height: 4.25rem;
-    padding-left: 2.25rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .hero-image {
-    padding-left: 5rem;
-  }
-}
-
 .primary-footer {
   background: #323232;
   padding-top: 1.5rem;
@@ -336,4 +310,4 @@ h6 {
   .footer-logo-container {
     padding-top: 1rem;
   }
-}/*# sourceMappingURL=shows.css.map */
+}/*# sourceMappingURL=global.css.map */

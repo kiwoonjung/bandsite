@@ -1,166 +1,11 @@
 @use './partials/variables' as *;
 @use './partials/mixins' as *;
 
-*, *:before, *:after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-::placeholder {
-    color: #000000;
-}
-
-a {
-    text-decoration: none;
-}
-
-li {
-    list-style: none;
-}
-
-h1 {
-    color: #FFFFFF;
-    font-family: "avenir-demi";
-    font-size: 1.5rem;
-    line-height: 2rem;
-
-        @include tablet {
-            font-size: 3.75rem;
-            line-height: 4.25rem;
-        }
-}
-
-h2 {
-    font-family: "avenir-demi";
-    font-size: 1.5rem;
-    
-        @include tablet {
-            font-size: 2.25rem;
-            line-height: 2.75rem;
-        }
-}
-
-h3 {
-    font-family: "avenir-demi";
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-
-        @include tablet {
-            font-size: 1.5rem;
-            line-height: 2rem;
-        }
-}
-
-h4 {
-    font-family: "avenir-regular";
-    font-size: 0.813rem;
-    line-height: 1.125rem;
-    font-weight: 400;
-
-        @include tablet {
-            font-size: 0.875rem;
-            line-height: 1.375rem;
-        }
-}
-
-h5 {
-    font-family: "avenir-regular";
-    font-size: 0.813rem;
-    line-height: 1.125rem;
-    font-weight: 400;
-
-        @include tablet {
-            font-size: 0.875rem;
-            line-height: 1.25rem;
-        }
-}
-
-h6 {
-    font-family: "avenir-regular";
-    font-size: 0.625rem;
-    line-height: 1.25rem;
-    font-weight: 700;
-
-        @include tablet {
-            font-size: 0.75rem;
-            line-height: 1.25rem;
-        }
-}
-
-.header {
-    background-color: $bandsite-black;
-    width: 100%;
-
-    @include tablet {
-        display: flex;
-        align-items: flex-end;
-        padding-top: 1rem;
-    }
-}
-
-.primary-nav {
-    @include tablet {
-        display: flex;
-        justify-content: space-evenly;
-        width: 50%;
-        align-items: baseline;
-    }
-}
-
-.logo {
-    display: flex;
-    justify-content: center;
-    padding-top: $mobile-padding-after;
-    padding-bottom: $mobile-padding-after;
-
-    @include tablet {
-        padding-left: $tablet-padding-after;
-        padding-right: $tablet-padding-after;
-    }
-
-    @include desktop {
-        padding-left: 5rem;
-    }
-}
-
-.logo-padding {
-    @include tablet {
-        padding-bottom: 0.5rem;
-    }
-}
-
-.list {
-
-    &__item {
-        display: flex;
-
-        @include tablet {
-            display: flex;
-            gap: 4rem;
-        }
-    }
-
-    &__link {
-        color: #AFAFAF;
-        width: 50%;
-        display: grid;
-        justify-content: center;
-        padding-bottom: $mobile-padding-after;
-    }
-
-    &__link--active,
-    &__link:hover {
-        color: #FFFFFF;
-        border-bottom: 4px solid #FFFFFF;
-    }
-}
-
 .hero-image {
-    background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.5), 
-    rgba(0, 0, 0, 0.5)), 
-    url(../assets/Images/hero-bio.jpg);
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)),
+        url(../assets/Images/hero-bio.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 30vh;
@@ -169,20 +14,20 @@ h6 {
     align-items: center;
     padding-left: $mobile-padding-between;
 
-        @include tablet {
-            min-height: 45vh;
-        }
-            
-        @include tablet {
-            font-size: 3.75rem;
-            line-height: 4.25rem;
-            padding-left: 2.25rem;
-        }
-            
-        @include desktop {
-            padding-left: 5rem;
-        }
-            }
+    @include tablet {
+        min-height: 45vh;
+    }
+
+    @include tablet {
+        font-size: 3.75rem;
+        line-height: 4.25rem;
+        padding-left: 2.25rem;
+    }
+
+    @include desktop {
+        padding-left: 5rem;
+    }
+}
 
 .band-image {
     width: 100%;
@@ -208,8 +53,8 @@ h6 {
     }
 
     @include desktop {
-        padding-right:10rem;
-        padding-left:10rem;
+        padding-right: 10rem;
+        padding-left: 10rem;
         padding-bottom: $tablet-padding-after;
     }
 }
@@ -277,20 +122,20 @@ h6 {
     padding-left: $mobile-padding-between;
     padding-right: $mobile-padding-between;
 
-        @include tablet {
-            padding-left: $tablet-padding-after;
-            padding-right: $tablet-padding-after;
-            padding-bottom: $tablet-padding-after;
-        }
+    @include tablet {
+        padding-left: $tablet-padding-after;
+        padding-right: $tablet-padding-after;
+        padding-bottom: $tablet-padding-after;
+    }
 
-        @include desktop {
-            padding-left: 5rem;
-            padding-right: 5rem;
-            padding-bottom: $tablet-padding-after;
-        }
+    @include desktop {
+        padding-left: 5rem;
+        padding-right: 5rem;
+        padding-bottom: $tablet-padding-after;
+    }
 }
 
-.photo-gallery-container{
+.photo-gallery-container {
     @include tablet {
         display: flex;
         justify-content: space-between;
@@ -301,19 +146,19 @@ h6 {
     padding-top: 1rem;
     padding-bottom: $mobile-padding-after;
 
-        @include tablet {
-            padding-top: $tablet-padding-before;
-            padding-bottom: $tablet-padding-before;
-        }
+    @include tablet {
+        padding-top: $tablet-padding-before;
+        padding-bottom: $tablet-padding-before;
+    }
 }
 
 .gallery-image-container {
     padding-bottom: $mobile-padding-after;
 
-        @include tablet {
-            width: 31.5%;
-            display: inline-block;
-        }
+    @include tablet {
+        width: 31.5%;
+        display: inline-block;
+    }
 }
 
 .photo-container {
@@ -336,66 +181,66 @@ h6 {
 
 }
 
-.form-container {
-    padding-right: $mobile-padding-between;
-    padding-bottom: $mobile-padding-after;
-    padding-left: $mobile-padding-between;
+// .form-container {
+//     padding-right: $mobile-padding-between;
+//     padding-bottom: $mobile-padding-after;
+//     padding-left: $mobile-padding-between;
 
-}
+// }
 
-.avater-container {
-    display: flex;
-    gap: 0.5rem;
-}
+// .avater-container {
+//     display: flex;
+//     gap: 0.5rem;
+// }
 
-.avatar {
-    width: 2.25rem;
-    height: 2.25rem;
-    border-radius: 50%;
+// .avatar {
+//     width: 2.25rem;
+//     height: 2.25rem;
+//     border-radius: 50%;
 
-    @include tablet {
-        width: 3rem;
-        height: 3rem;
-    }
-}
+//     @include tablet {
+//         width: 3rem;
+//         height: 3rem;
+//     }
+// }
 
-.comment-container {
-    padding-left: 2.8rem;
-}
+// .comment-container {
+//     padding-left: 2.8rem;
+// }
 
-.btn-comment {
-    color: #FFFFFF;
-    background: $bandsite-black;
-    height: 2.5rem;
-    width: 100%;
-    border-radius: 0.25rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+// .btn-comment {
+//     color: #FFFFFF;
+//     background: $bandsite-black;
+//     height: 2.5rem;
+//     width: 100%;
+//     border-radius: 0.25rem;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
 
-.btn-container {
-    padding-left: 3.8rem;
-    padding-right: $mobile-padding-between;
-    padding-bottom: $mobile-padding-after;
-}
+// .btn-container {
+//     padding-left: 3.8rem;
+//     padding-right: $mobile-padding-between;
+//     padding-bottom: $mobile-padding-after;
+// }
 
-.btn-comment:hover {
-    background: #000000;
-}
+// .btn-comment:hover {
+//     background: #000000;
+// }
 
-.soild {
-    border-top: .0625rem solid #E1E1E1;
-    margin-right: $mobile-padding-between;
-    margin-left: $mobile-padding-between;
-}
+// .soild {
+//     border-top: .0625rem solid #E1E1E1;
+//     margin-right: $mobile-padding-between;
+//     margin-left: $mobile-padding-between;
+// }
 
-.avatar-placeholder{
-    background-color: #E1E1E1;
-    width: 2.25rem;
-    height: 2.25rem;
-    border-radius: 50%;
-}
+// .avatar-placeholder{
+//     background-color: #E1E1E1;
+//     width: 2.25rem;
+//     height: 2.25rem;
+//     border-radius: 50%;
+// }
 
 // .name-container {
 //     display: inline-block;
@@ -403,22 +248,22 @@ h6 {
 //     padding-right: $mobile-padding-between;
 // }
 
-.name-text {
-    color: #AFAFAF;
-    padding-left: 2.8rem;
-    padding-bottom: 0.2rem;
-    padding-top: 1rem;
-}
+// .name-text {
+//     color: #AFAFAF;
+//     padding-left: 2.8rem;
+//     padding-bottom: 0.2rem;
+//     padding-top: 1rem;
+// }
 
-.name-form {
-    height: 2.25rem;
-    width: 100%;
-}
+// .name-form {
+//     height: 2.25rem;
+//     width: 100%;
+// }
 
-.comment-form {
-    height: 6.75rem;
-    width: 100%;
-}
+// .comment-form {
+//     height: 6.75rem;
+//     width: 100%;
+// }
 
 .primary-footer {
     background: $bandsite-black;
@@ -426,22 +271,22 @@ h6 {
     padding-left: $mobile-padding-between;
     padding-right: $mobile-padding-between;
 
-        @include tablet {
-            padding-top: 3rem;
-            padding-right: 2.25rem;
-            padding-left: 2.25rem;
-        }
+    @include tablet {
+        padding-top: 3rem;
+        padding-right: 2.25rem;
+        padding-left: 2.25rem;
+    }
 
-        @include desktop {
-            padding-top: 3rem;
-            padding-right: 5rem;
-            padding-bottom: 3rem;
-            padding-left: 5rem;
-        }
+    @include desktop {
+        padding-top: 3rem;
+        padding-right: 5rem;
+        padding-bottom: 3rem;
+        padding-left: 5rem;
+    }
 }
 
 .footer-container-1 {
-    
+
     @include tablet {
         display: flex;
         align-items: center;
@@ -462,9 +307,9 @@ h6 {
     display: inline-flex;
     gap: 2rem;
 
-        @include tablet {
-            padding-top: 0;
-        }
+    @include tablet {
+        padding-top: 0;
+    }
 }
 
 .bottom-logo-container {
@@ -477,9 +322,9 @@ h6 {
 .tablet-bottom-logo {
     display: none;
 
-        @include tablet {
-            display: flex;
-        }
+    @include tablet {
+        display: flex;
+    }
 }
 
 .primary-footer-container {
@@ -518,11 +363,12 @@ h6 {
     font-size: 0.875rem;
     line-height: 1.375rem;
 
-        @include tablet {
-            font-size: 0.875rem;
-            line-height: 1.375rem;
-        }
+    @include tablet {
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+    }
 }
+
 
 .footer-regular {
     color: $primary-text-color;
@@ -535,15 +381,15 @@ h6 {
     background: $bandsite-black;
     height: 1.25rem;
 
-        @include tablet {
-            display: none;
-        }
+    @include tablet {
+        display: none;
+    }
 }
 
-.footer-logo-container{
+.footer-logo-container {
     padding-top: 3.5rem;
 
-        @include tablet {
-            padding-top: 1rem;
-        }
+    @include tablet {
+        padding-top: 1rem;
+    }
 }

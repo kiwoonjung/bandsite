@@ -1,7 +1,9 @@
 @use './partials/variables' as *;
 @use './partials/mixins' as *;
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -25,20 +27,20 @@ h1 {
     font-size: 1.5rem;
     line-height: 2rem;
 
-        @include tablet {
-            font-size: 3.75rem;
-            line-height: 4.25rem;
-        }
+    @include tablet {
+        font-size: 3.75rem;
+        line-height: 4.25rem;
+    }
 }
 
 h2 {
     font-family: "avenir-demi";
     font-size: 1.5rem;
-    
-        @include tablet {
-            font-size: 2.25rem;
-            line-height: 2.75rem;
-        }
+
+    @include tablet {
+        font-size: 2.25rem;
+        line-height: 2.75rem;
+    }
 }
 
 h3 {
@@ -46,10 +48,10 @@ h3 {
     font-size: 0.875rem;
     line-height: 1.375rem;
 
-        @include tablet {
-            font-size: 1.5rem;
-            line-height: 2rem;
-        }
+    @include tablet {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
 }
 
 h4 {
@@ -58,10 +60,10 @@ h4 {
     line-height: 1.125rem;
     font-weight: 400;
 
-        @include tablet {
-            font-size: 0.875rem;
-            line-height: 1.375rem;
-        }
+    @include tablet {
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+    }
 }
 
 h5 {
@@ -70,10 +72,10 @@ h5 {
     line-height: 1.125rem;
     font-weight: 400;
 
-        @include tablet {
-            font-size: 0.875rem;
-            line-height: 1.25rem;
-        }
+    @include tablet {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+    }
 }
 
 h6 {
@@ -82,10 +84,10 @@ h6 {
     line-height: 1.25rem;
     font-weight: 700;
 
-        @include tablet {
-            font-size: 0.75rem;
-            line-height: 1.25rem;
-        }
+    @include tablet {
+        font-size: 0.75rem;
+        line-height: 1.25rem;
+    }
 }
 
 .header {
@@ -156,56 +158,28 @@ h6 {
     }
 }
 
-.hero-image {
-    background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.5), 
-    rgba(0, 0, 0, 0.5)), 
-    url(../assets/Images/hero-bio.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 30vh;
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding-left: $mobile-padding-between;
-
-        @include tablet {
-            min-height: 45vh;
-        }
-            
-        @include tablet {
-            font-size: 3.75rem;
-            line-height: 4.25rem;
-            padding-left: 2.25rem;
-        }
-            
-        @include desktop {
-            padding-left: 5rem;
-        }
-            }
-
 .primary-footer {
     background: $bandsite-black;
     padding-top: $mobile-padding-before;
     padding-left: $mobile-padding-between;
     padding-right: $mobile-padding-between;
 
-        @include tablet {
-            padding-top: 3rem;
-            padding-right: 2.25rem;
-            padding-left: 2.25rem;
-        }
+    @include tablet {
+        padding-top: 3rem;
+        padding-right: 2.25rem;
+        padding-left: 2.25rem;
+    }
 
-        @include desktop {
-            padding-top: 3rem;
-            padding-right: 5rem;
-            padding-bottom: 3rem;
-            padding-left: 5rem;
-        }
+    @include desktop {
+        padding-top: 3rem;
+        padding-right: 5rem;
+        padding-bottom: 3rem;
+        padding-left: 5rem;
+    }
 }
 
 .footer-container-1 {
-    
+
     @include tablet {
         display: flex;
         align-items: center;
@@ -226,9 +200,9 @@ h6 {
     display: inline-flex;
     gap: 2rem;
 
-        @include tablet {
-            padding-top: 0;
-        }
+    @include tablet {
+        padding-top: 0;
+    }
 }
 
 .bottom-logo-container {
@@ -241,9 +215,9 @@ h6 {
 .tablet-bottom-logo {
     display: none;
 
-        @include tablet {
-            display: flex;
-        }
+    @include tablet {
+        display: flex;
+    }
 }
 
 .primary-footer-container {
@@ -282,10 +256,10 @@ h6 {
     font-size: 0.875rem;
     line-height: 1.375rem;
 
-        @include tablet {
-            font-size: 0.875rem;
-            line-height: 1.375rem;
-        }
+    @include tablet {
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+    }
 }
 
 .footer-regular {
@@ -299,15 +273,15 @@ h6 {
     background: $bandsite-black;
     height: 1.25rem;
 
-        @include tablet {
-            display: none;
-        }
+    @include tablet {
+        display: none;
+    }
 }
 
-.footer-logo-container{
+.footer-logo-container {
     padding-top: 3.5rem;
 
-        @include tablet {
-            padding-top: 1rem;
-        }
+    @include tablet {
+        padding-top: 1rem;
+    }
 }

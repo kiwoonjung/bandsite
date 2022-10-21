@@ -1,0 +1,125 @@
+@use './partials/variables' as *;
+@use './partials/mixins' as *;
+
+.hero-image {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(../assets/Images/hero-shows.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 57vh;
+    position: relative;
+    padding-right: $mobile-padding-between;
+    padding-left: $mobile-padding-between;
+
+    &__text {
+        color: $white;
+        padding-top: $mobile-padding-before;
+        padding-bottom: $mobile-padding-before;
+
+        @include tablet {
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
+    }
+
+    &__text-2 {
+        padding-bottom: $mobile-padding-before;
+
+        @include desktop {
+            padding-bottom: 7rem;
+        }
+    }
+
+    @include tablet {
+        min-height: 73vh;
+        font-size: 3.75rem;
+        line-height: 4.25rem;
+        padding-left: 2.25rem;
+    }
+
+    @include desktop {
+        display: flex;
+        align-items: center;
+        gap: 10.3rem;
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+}
+
+iframe {
+    @include tablet {
+        width: 60%;
+    }
+
+    @include desktop {
+        width: 40%;
+    }
+}
+
+// .show-tablet {
+// }
+
+.show-container {
+    padding-top: $mobile-padding-before;
+    padding-left: $mobile-padding-between;
+    padding-right: $mobile-padding-between;
+    padding-bottom: $mobile-padding-after;
+}
+
+.showtime-container {
+    @include tablet {
+        display: flex;
+        align-items: center;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        justify-content: space-between;
+    }
+}
+
+.show-text {
+    padding-bottom: 0.5rem;
+}
+
+.h6-mecury {
+    color: $silver;
+    padding-top: $mobile-padding-after;
+
+    @include tablet {
+        display: none;
+    }
+}
+
+.ticket-text {
+    font-family: "avenir-demi";
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    color: #FFFFFF;
+    background: $bandsite-black;
+    height: 2.5rem;
+    width: 100%;
+    border-radius: 0.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: $mobile-padding-after;
+    margin-bottom: $mobile-padding-after;
+
+    @include tablet {
+        width: 9.375rem;
+    }
+}
+
+.divider {
+    border: 0.0625rem solid $mercury;
+    margin-right: -1rem;
+    margin-left: -1rem;
+
+    @include tablet {
+        display: none;
+    }
+}
+
+.tablet-info {
+    display: flex;
+}

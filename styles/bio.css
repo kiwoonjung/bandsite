@@ -2,179 +2,15 @@
   font-family: "avenir-regular";
   src: url(../assets/Font/AvenirNextLTPro-Regular.otf) format("opentype");
 }
+
 @font-face {
   font-family: "avenir-demi";
   src: url(../assets/Font/AvenirNextLTPro-Demi.otf) format("opentype");
 }
+
 @font-face {
   font-family: "avenir-bold";
   src: url(../assets/Font/AvenirNextLTPro-Bold.otf) format("opentype");
-}
-*, *:before, *:after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-::-moz-placeholder {
-  color: #000000;
-}
-
-:-ms-input-placeholder {
-  color: #000000;
-}
-
-::placeholder {
-  color: #000000;
-}
-
-a {
-  text-decoration: none;
-}
-
-li {
-  list-style: none;
-}
-
-h1 {
-  color: #FFFFFF;
-  font-family: "avenir-demi";
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-@media screen and (min-width: 768px) {
-  h1 {
-    font-size: 3.75rem;
-    line-height: 4.25rem;
-  }
-}
-
-h2 {
-  font-family: "avenir-demi";
-  font-size: 1.5rem;
-}
-@media screen and (min-width: 768px) {
-  h2 {
-    font-size: 2.25rem;
-    line-height: 2.75rem;
-  }
-}
-
-h3 {
-  font-family: "avenir-demi";
-  font-size: 0.875rem;
-  line-height: 1.375rem;
-}
-@media screen and (min-width: 768px) {
-  h3 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-}
-
-h4 {
-  font-family: "avenir-regular";
-  font-size: 0.813rem;
-  line-height: 1.125rem;
-  font-weight: 400;
-}
-@media screen and (min-width: 768px) {
-  h4 {
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-  }
-}
-
-h5 {
-  font-family: "avenir-regular";
-  font-size: 0.813rem;
-  line-height: 1.125rem;
-  font-weight: 400;
-}
-@media screen and (min-width: 768px) {
-  h5 {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-}
-
-h6 {
-  font-family: "avenir-regular";
-  font-size: 0.625rem;
-  line-height: 1.25rem;
-  font-weight: 700;
-}
-@media screen and (min-width: 768px) {
-  h6 {
-    font-size: 0.75rem;
-    line-height: 1.25rem;
-  }
-}
-
-.header {
-  background-color: #323232;
-  width: 100%;
-}
-@media screen and (min-width: 768px) {
-  .header {
-    display: flex;
-    align-items: flex-end;
-    padding-top: 1rem;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .primary-nav {
-    display: flex;
-    justify-content: space-evenly;
-    width: 50%;
-    align-items: baseline;
-  }
-}
-
-.logo {
-  display: flex;
-  justify-content: center;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-@media screen and (min-width: 768px) {
-  .logo {
-    padding-left: 2.25rem;
-    padding-right: 2.25rem;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .logo {
-    padding-left: 5rem;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .logo-padding {
-    padding-bottom: 0.5rem;
-  }
-}
-
-.list__item {
-  display: flex;
-}
-@media screen and (min-width: 768px) {
-  .list__item {
-    display: flex;
-    gap: 4rem;
-  }
-}
-.list__link {
-  color: #AFAFAF;
-  width: 50%;
-  display: grid;
-  justify-content: center;
-  padding-bottom: 1rem;
-}
-.list__link--active, .list__link:hover {
-  color: #FFFFFF;
-  border-bottom: 4px solid #FFFFFF;
 }
 
 .hero-image {
@@ -187,11 +23,13 @@ h6 {
   align-items: center;
   padding-left: 1rem;
 }
+
 @media screen and (min-width: 768px) {
   .hero-image {
     min-height: 45vh;
   }
 }
+
 @media screen and (min-width: 768px) {
   .hero-image {
     font-size: 3.75rem;
@@ -199,6 +37,7 @@ h6 {
     padding-left: 2.25rem;
   }
 }
+
 @media screen and (min-width: 1280px) {
   .hero-image {
     padding-left: 5rem;
@@ -211,6 +50,7 @@ h6 {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+
 @media screen and (min-width: 768px) {
   .band-image {
     padding-top: 2.25rem;
@@ -223,6 +63,7 @@ h6 {
   padding-bottom: 1rem;
   padding-left: 1rem;
 }
+
 @media screen and (min-width: 768px) {
   .body-container {
     padding-right: 5rem;
@@ -230,6 +71,7 @@ h6 {
     padding-bottom: 2.25rem;
   }
 }
+
 @media screen and (min-width: 1280px) {
   .body-container {
     padding-right: 10rem;
@@ -242,12 +84,14 @@ h6 {
   padding-top: 1.5rem;
   padding-left: 1rem;
 }
+
 @media screen and (min-width: 768px) {
   .band-title {
     padding-top: 3rem;
     padding-left: 2.25rem;
   }
 }
+
 @media screen and (min-width: 1280px) {
   .band-title {
     padding-left: 5rem;
@@ -259,6 +103,7 @@ h6 {
   line-height: 1.5rem;
   padding-bottom: 0.5rem;
 }
+
 @media screen and (min-width: 768px) {
   .band-text-1 {
     font-size: 1.5rem;
@@ -277,6 +122,7 @@ h6 {
   font-family: "avenir-demi";
   padding-bottom: 1rem;
 }
+
 @media screen and (min-width: 768px) {
   .band-text-2 {
     padding-bottom: 2.25rem;
@@ -287,6 +133,7 @@ h6 {
   font-family: "avenir-regular";
   font-weight: bold;
 }
+
 @media screen and (min-width: 1280px) {
   .body-text-1 {
     padding-right: 16rem;
@@ -296,6 +143,7 @@ h6 {
 .body-text-2 {
   padding-top: 1rem;
 }
+
 @media screen and (min-width: 768px) {
   .body-text-2 {
     padding-top: 2.25rem;
@@ -307,6 +155,7 @@ h6 {
   padding-left: 1rem;
   padding-right: 1rem;
 }
+
 @media screen and (min-width: 768px) {
   .background-alabaster {
     padding-left: 2.25rem;
@@ -314,6 +163,7 @@ h6 {
     padding-bottom: 2.25rem;
   }
 }
+
 @media screen and (min-width: 1280px) {
   .background-alabaster {
     padding-left: 5rem;
@@ -333,6 +183,7 @@ h6 {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+
 @media screen and (min-width: 768px) {
   .section-photo {
     padding-top: 3rem;
@@ -343,6 +194,7 @@ h6 {
 .gallery-image-container {
   padding-bottom: 1rem;
 }
+
 @media screen and (min-width: 768px) {
   .gallery-image-container {
     width: 31.5%;
@@ -364,88 +216,11 @@ h6 {
   height: auto;
   padding-bottom: 1rem;
 }
+
 @media screen and (min-width: 768px) {
   .primary-photo {
     padding-bottom: 0;
   }
-}
-
-.form-container {
-  padding-right: 1rem;
-  padding-bottom: 1rem;
-  padding-left: 1rem;
-}
-
-.avater-container {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.avatar {
-  width: 2.25rem;
-  height: 2.25rem;
-  border-radius: 50%;
-}
-@media screen and (min-width: 768px) {
-  .avatar {
-    width: 3rem;
-    height: 3rem;
-  }
-}
-
-.comment-container {
-  padding-left: 2.8rem;
-}
-
-.btn-comment {
-  color: #FFFFFF;
-  background: #323232;
-  height: 2.5rem;
-  width: 100%;
-  border-radius: 0.25rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.btn-container {
-  padding-left: 3.8rem;
-  padding-right: 1rem;
-  padding-bottom: 1rem;
-}
-
-.btn-comment:hover {
-  background: #000000;
-}
-
-.soild {
-  border-top: 0.0625rem solid #E1E1E1;
-  margin-right: 1rem;
-  margin-left: 1rem;
-}
-
-.avatar-placeholder {
-  background-color: #E1E1E1;
-  width: 2.25rem;
-  height: 2.25rem;
-  border-radius: 50%;
-}
-
-.name-text {
-  color: #AFAFAF;
-  padding-left: 2.8rem;
-  padding-bottom: 0.2rem;
-  padding-top: 1rem;
-}
-
-.name-form {
-  height: 2.25rem;
-  width: 100%;
-}
-
-.comment-form {
-  height: 6.75rem;
-  width: 100%;
 }
 
 .primary-footer {
@@ -454,6 +229,7 @@ h6 {
   padding-left: 1rem;
   padding-right: 1rem;
 }
+
 @media screen and (min-width: 768px) {
   .primary-footer {
     padding-top: 3rem;
@@ -461,6 +237,7 @@ h6 {
     padding-left: 2.25rem;
   }
 }
+
 @media screen and (min-width: 1280px) {
   .primary-footer {
     padding-top: 3rem;
@@ -491,6 +268,7 @@ h6 {
   display: inline-flex;
   gap: 2rem;
 }
+
 @media screen and (min-width: 768px) {
   .footer-icon {
     padding-top: 0;
@@ -507,6 +285,7 @@ h6 {
 .tablet-bottom-logo {
   display: none;
 }
+
 @media screen and (min-width: 768px) {
   .tablet-bottom-logo {
     display: flex;
@@ -548,6 +327,7 @@ h6 {
   font-size: 0.875rem;
   line-height: 1.375rem;
 }
+
 @media screen and (min-width: 768px) {
   .footer-bold {
     font-size: 0.875rem;
@@ -566,6 +346,7 @@ h6 {
   background: #323232;
   height: 1.25rem;
 }
+
 @media screen and (min-width: 768px) {
   .site-logo-bottom {
     display: none;
@@ -575,8 +356,11 @@ h6 {
 .footer-logo-container {
   padding-top: 3.5rem;
 }
+
 @media screen and (min-width: 768px) {
   .footer-logo-container {
     padding-top: 1rem;
   }
-}/*# sourceMappingURL=bio.css.map */
+}
+
+/*# sourceMappingURL=bio.css.map */
