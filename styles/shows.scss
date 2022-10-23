@@ -57,14 +57,39 @@ iframe {
     }
 }
 
-// .show-tablet {
-// }
-
 .show-container {
     padding-top: $mobile-padding-before;
     padding-left: $mobile-padding-between;
     padding-right: $mobile-padding-between;
     padding-bottom: $mobile-padding-after;
+
+    @include tablet {
+        padding-top: $tablet-padding-before;
+        padding-left: $tablet-padding-between;
+        padding-right: $tablet-padding-between;
+        padding-bottom: $tablet-padding-after;
+    }
+
+    @include desktop {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+
+.show__date {
+    width: 11rem;
+}
+
+.show__venue {
+    width: 12rem;
+}
+
+.show__location {
+    width: 11rem;
+}
+
+.show__gap {
+    width: 9.375rem;
 }
 
 .showtime-container {
@@ -74,11 +99,17 @@ iframe {
         font-size: 0.875rem;
         line-height: 1.25rem;
         justify-content: space-between;
+        border-bottom: 0.0625rem solid $mercury;
     }
+
 }
 
 .show-text {
     padding-bottom: 0.5rem;
+
+    @include tablet {
+        padding-bottom: 3rem;
+    }
 }
 
 .h6-mecury {
@@ -110,6 +141,11 @@ iframe {
     }
 }
 
+.ticket-text:hover {
+    background: #000000;
+
+}
+
 .divider {
     border: 0.0625rem solid $mercury;
     margin-right: -1rem;
@@ -122,4 +158,5 @@ iframe {
 
 .tablet-info {
     display: flex;
+    justify-content: space-between;
 }

@@ -38,24 +38,28 @@ showText.innerText = "Shows";
 showMainContainer.appendChild(showText);
 
 
-const tabletInfoContainer = document.createElement('div')
+const tabletInfoContainer = document.createElement('li')
 tabletInfoContainer.classList.add("tablet-info");
-showMainContainer.appendChild(tabletInfoContainer);
+// showMainContainer.appendChild(tabletInfoContainer);
 
 const tableDate = document.createElement('h6');
-tableDate.classList.add("show-tablet");
+tableDate.classList.add("show__date");
 tableDate.innerText = "DATE";
 tabletInfoContainer.appendChild(tableDate);
 
 const tableVenue = document.createElement('h6');
-tableVenue.classList.add("show-tablet");
+tableVenue.classList.add("show__venue");
 tableVenue.innerText = "VENUE";
 tabletInfoContainer.appendChild(tableVenue);
 
 const tableLocation = document.createElement('h6');
-tableLocation.classList.add("show-tablet");
+tableLocation.classList.add("show__location");
 tableLocation.innerText = "LOCATION";
 tabletInfoContainer.appendChild(tableLocation);
+
+const tableGap = document.createElement('div');
+tableGap.classList.add("show__gap");
+tabletInfoContainer.appendChild(tableGap);
 
 
 
@@ -64,6 +68,7 @@ const showTimeList = document.createElement('ul');
 const showTimeListItem = document.createElement('li');
 showTimeListItem.classList.add("showtime-container");
 
+showTimeList.appendChild(tabletInfoContainer);
 showMainContainer.appendChild(showTimeList)
 showTimeListContainer.appendChild(showMainContainer);
 
@@ -79,21 +84,24 @@ function createShowTimes() {
         showTimeDateList.classList.add("h6-mecury");
         showTimeDateList.innerText = "DATE";
 
-        const showTimeDate = document.createElement('h3');
+        const showTimeDate = document.createElement('h4');
+        showTimeDate.classList = ("show__date")
         showTimeDate.innerText = showTime[i].date;
 
         const showTimeVenueList = document.createElement('h6');
         showTimeVenueList.classList.add("h6-mecury");
         showTimeVenueList.innerText = "VENUE";
 
-        const showTimeVenue = document.createElement('h3');
+        const showTimeVenue = document.createElement('h4');
+        showTimeVenue.classList = ("show__venue");
         showTimeVenue.innerText = showTime[i].venue;
 
         const showTimeLocationList = document.createElement('h6');
         showTimeLocationList.classList.add("h6-mecury");
         showTimeLocationList.innerText = "LOCATION";
 
-        const showTimeLocation = document.createElement('h3');
+        const showTimeLocation = document.createElement('h4');
+        showTimeLocation.classList = ("show__location");
         showTimeLocation.innerText = showTime[i].location;
 
         const showTimeButton = document.createElement('a');

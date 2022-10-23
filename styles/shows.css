@@ -73,6 +73,36 @@
   padding-right: 1rem;
   padding-bottom: 1rem;
 }
+@media screen and (min-width: 768px) {
+  .show-container {
+    padding-top: 3rem;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+    padding-bottom: 2.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .show-container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+.show__date {
+  width: 11rem;
+}
+
+.show__venue {
+  width: 12rem;
+}
+
+.show__location {
+  width: 11rem;
+}
+
+.show__gap {
+  width: 9.375rem;
+}
 
 @media screen and (min-width: 768px) {
   .showtime-container {
@@ -81,11 +111,17 @@
     font-size: 0.875rem;
     line-height: 1.25rem;
     justify-content: space-between;
+    border-bottom: 0.0625rem solid #E1E1E1;
   }
 }
 
 .show-text {
   padding-bottom: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .show-text {
+    padding-bottom: 3rem;
+  }
 }
 
 .h6-mecury {
@@ -119,6 +155,10 @@
   }
 }
 
+.ticket-text:hover {
+  background: #000000;
+}
+
 .divider {
   border: 0.0625rem solid #E1E1E1;
   margin-right: -1rem;
@@ -132,4 +172,5 @@
 
 .tablet-info {
   display: flex;
+  justify-content: space-between;
 }/*# sourceMappingURL=shows.css.map */

@@ -2,17 +2,14 @@
   font-family: "avenir-regular";
   src: url(../assets/Font/AvenirNextLTPro-Regular.otf) format("opentype");
 }
-
 @font-face {
   font-family: "avenir-demi";
   src: url(../assets/Font/AvenirNextLTPro-Demi.otf) format("opentype");
 }
-
 @font-face {
   font-family: "avenir-bold";
   src: url(../assets/Font/AvenirNextLTPro-Bold.otf) format("opentype");
 }
-
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/Images/hero-bio.jpg);
   background-size: cover;
@@ -23,13 +20,11 @@
   align-items: center;
   padding-left: 1rem;
 }
-
 @media screen and (min-width: 768px) {
   .hero-image {
     min-height: 45vh;
   }
 }
-
 @media screen and (min-width: 768px) {
   .hero-image {
     font-size: 3.75rem;
@@ -37,7 +32,6 @@
     padding-left: 2.25rem;
   }
 }
-
 @media screen and (min-width: 1280px) {
   .hero-image {
     padding-left: 5rem;
@@ -50,7 +44,6 @@
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-
 @media screen and (min-width: 768px) {
   .band-image {
     padding-top: 2.25rem;
@@ -63,7 +56,6 @@
   padding-bottom: 1rem;
   padding-left: 1rem;
 }
-
 @media screen and (min-width: 768px) {
   .body-container {
     padding-right: 5rem;
@@ -71,7 +63,6 @@
     padding-bottom: 2.25rem;
   }
 }
-
 @media screen and (min-width: 1280px) {
   .body-container {
     padding-right: 10rem;
@@ -84,14 +75,12 @@
   padding-top: 1.5rem;
   padding-left: 1rem;
 }
-
 @media screen and (min-width: 768px) {
   .band-title {
     padding-top: 3rem;
     padding-left: 2.25rem;
   }
 }
-
 @media screen and (min-width: 1280px) {
   .band-title {
     padding-left: 5rem;
@@ -103,7 +92,6 @@
   line-height: 1.5rem;
   padding-bottom: 0.5rem;
 }
-
 @media screen and (min-width: 768px) {
   .band-text-1 {
     font-size: 1.5rem;
@@ -122,7 +110,6 @@
   font-family: "avenir-demi";
   padding-bottom: 1rem;
 }
-
 @media screen and (min-width: 768px) {
   .band-text-2 {
     padding-bottom: 2.25rem;
@@ -133,7 +120,6 @@
   font-family: "avenir-regular";
   font-weight: bold;
 }
-
 @media screen and (min-width: 1280px) {
   .body-text-1 {
     padding-right: 16rem;
@@ -143,7 +129,6 @@
 .body-text-2 {
   padding-top: 1rem;
 }
-
 @media screen and (min-width: 768px) {
   .body-text-2 {
     padding-top: 2.25rem;
@@ -155,7 +140,6 @@
   padding-left: 1rem;
   padding-right: 1rem;
 }
-
 @media screen and (min-width: 768px) {
   .background-alabaster {
     padding-left: 2.25rem;
@@ -163,7 +147,6 @@
     padding-bottom: 2.25rem;
   }
 }
-
 @media screen and (min-width: 1280px) {
   .background-alabaster {
     padding-left: 5rem;
@@ -183,7 +166,6 @@
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-
 @media screen and (min-width: 768px) {
   .section-photo {
     padding-top: 3rem;
@@ -194,7 +176,6 @@
 .gallery-image-container {
   padding-bottom: 1rem;
 }
-
 @media screen and (min-width: 768px) {
   .gallery-image-container {
     width: 31.5%;
@@ -216,11 +197,125 @@
   height: auto;
   padding-bottom: 1rem;
 }
-
 @media screen and (min-width: 768px) {
   .primary-photo {
     padding-bottom: 0;
   }
+}
+
+.comment-container {
+  display: flex;
+  padding-top: 1rem;
+  border-bottom: 0.0625rem solid #E1E1E1;
+}
+
+.form {
+  display: grid;
+  width: 100%;
+}
+.form__input {
+  height: 2.25rem;
+  margin-bottom: 1rem;
+  background-color: #fafafa;
+}
+.form__textarea {
+  height: 6rem;
+  margin-bottom: 1rem;
+  background-color: #fafafa;
+}
+.form__button {
+  color: #FFFFFF;
+  background: #323232;
+  height: 2.5rem;
+  width: 100%;
+  border-radius: 0.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form__button:hover {
+  background: #000000;
+}
+
+.avater-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.avatar {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .avatar {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+.comment-container {
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.btn-comment {
+  color: #FFFFFF;
+  background: #323232;
+  height: 2.5rem;
+  width: 100%;
+  border-radius: 0.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-container {
+  padding-left: 3.2rem;
+}
+
+.btn-comment:hover {
+  background: #000000;
+}
+
+.soild {
+  border-top: 0.0625rem solid #E1E1E1;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+.avatar-placeholder {
+  background-color: #E1E1E1;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+}
+
+.name-container {
+  display: inline-block;
+  width: 82%;
+  padding-right: 1rem;
+}
+
+.name-text {
+  color: #AFAFAF;
+  padding-left: 3.2rem;
+  padding-bottom: 0.2rem;
+  padding-top: 1rem;
+}
+
+.name-form {
+  height: 2.25rem;
+  width: 100%;
+}
+
+.comment-form {
+  height: 6.75rem;
+  width: 100%;
 }
 
 .primary-footer {
@@ -229,7 +324,6 @@
   padding-left: 1rem;
   padding-right: 1rem;
 }
-
 @media screen and (min-width: 768px) {
   .primary-footer {
     padding-top: 3rem;
@@ -237,7 +331,6 @@
     padding-left: 2.25rem;
   }
 }
-
 @media screen and (min-width: 1280px) {
   .primary-footer {
     padding-top: 3rem;
@@ -268,7 +361,6 @@
   display: inline-flex;
   gap: 2rem;
 }
-
 @media screen and (min-width: 768px) {
   .footer-icon {
     padding-top: 0;
@@ -285,7 +377,6 @@
 .tablet-bottom-logo {
   display: none;
 }
-
 @media screen and (min-width: 768px) {
   .tablet-bottom-logo {
     display: flex;
@@ -327,7 +418,6 @@
   font-size: 0.875rem;
   line-height: 1.375rem;
 }
-
 @media screen and (min-width: 768px) {
   .footer-bold {
     font-size: 0.875rem;
@@ -346,7 +436,6 @@
   background: #323232;
   height: 1.25rem;
 }
-
 @media screen and (min-width: 768px) {
   .site-logo-bottom {
     display: none;
@@ -356,11 +445,8 @@
 .footer-logo-container {
   padding-top: 3.5rem;
 }
-
 @media screen and (min-width: 768px) {
   .footer-logo-container {
     padding-top: 1rem;
   }
-}
-
-/*# sourceMappingURL=bio.css.map */
+}/*# sourceMappingURL=bio.css.map */
