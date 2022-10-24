@@ -174,18 +174,64 @@
     width: 100%;
     height: auto;
     padding-bottom: $mobile-padding-after;
+    filter: gray;
+    -webkit-filter: grayscale(100%);
 
     @include tablet {
         padding-bottom: 0;
     }
-
 }
 
-.comment-container {
-    display: flex;
-    padding-top: 1rem;
-    border-bottom: .0625rem solid #E1E1E1;
+.primary-photo:hover {
+    filter: none;
+    -webkit-filter: grayscale(0%);
+    transition: all 0.5s ease;
 }
+
+.primary-comment {
+    padding-left: $mobile-padding-between;
+    padding-right: $mobile-padding-between;
+
+    @include tablet {
+        padding-top: $tablet-padding-before;
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+
+    @include desktop {
+        padding-left: 22rem;
+        padding-right: 22rem;
+    }
+}
+
+.comment-title {
+    padding-top: $mobile-padding-before;
+    padding-left: $mobile-padding-between;
+
+    @include tablet {
+        padding-top: $tablet-padding-before;
+        padding-left: $tablet-padding-between;
+    }
+
+    @include desktop {
+        padding-left: 5rem;
+    }
+}
+
+// .comment-container {
+//     display: flex;
+//     padding-top: 1rem;
+//     border-bottom: .0625rem solid #E1E1E1;
+
+//     @include tablet {
+//         padding-top: $tablet-padding-after;
+//     }
+
+//     @include desktop {
+//         padding-left: 19rem;
+//         padding-right: 19rem;
+//     }
+// }
 
 .form {
     display: grid;
@@ -195,12 +241,42 @@
         height: 2.25rem;
         margin-bottom: $mobile-padding-after;
         background-color: $albaster;
+        border-radius: .25rem;
     }
 
     &__textarea {
         height: 6rem;
         margin-bottom: $mobile-padding-after;
         background-color: $albaster;
+
+        @include tablet {
+            margin-bottom: $tablet-padding-after;
+        }
+    }
+
+    .form__label {
+        font-family: "avenir-regular";
+        font-size: 0.625rem;
+        line-height: 1.25rem;
+        font-weight: 700;
+
+        @include tablet {
+            font-size: 0.75rem;
+            line-height: 1.25rem;
+        }
+    }
+
+    .form__input:invalid {
+        background-color: ivory;
+        border: none;
+        outline: 2px solid red;
+        border-radius: 5px;
+    }
+
+    .form__input:focus,
+    .form__textarea:focus {
+        outline: none !important;
+        border: 1px solid black;
     }
 
     &__button {
@@ -212,6 +288,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @include tablet {
+            width: 9.375rem;
+            justify-self: end;
+        }
     }
 }
 
@@ -219,19 +300,16 @@
     background: #000000;
 }
 
-
 .avater-container {
     display: flex;
     gap: 1rem;
 }
 
-.avatar {
-    width: 2.25rem;
+.default-avatar {
+    background: $mercury;
+    width: 2.46rem;
     height: 2.25rem;
     border-radius: 50%;
-    margin-top: 1rem;
-    margin-right: 1rem;
-
 
     @include tablet {
         width: 3rem;
@@ -239,10 +317,63 @@
     }
 }
 
-.comment-container {
+.default-content {
+    font-family: "avenir-regular";
+    padding-left: 3.25rem;
     padding-bottom: $mobile-padding-after;
-    padding-left: $mobile-padding-between;
-    padding-right: $mobile-padding-between;
+    border-bottom: 0.0625rem solid $mercury;
+
+
+
+
+    @include tablet {
+        padding-bottom: $tablet-padding-after;
+        padding-left: 3.9rem;
+
+        font-family: "avenir-regular";
+        font-size: 0.813rem;
+        line-height: 1.125rem;
+        font-weight: 400;
+    }
+}
+
+.avatar {
+    background-image: url(../assets/Images/Mohan-muruge.jpg);
+    background-size: cover;
+    width: 2.46rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    margin-top: 1rem;
+    margin-right: 1rem;
+
+    @include tablet {
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
+.avatar-icon {
+    background-image: url(../assets/Images/Mohan-muruge.jpg);
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.comment-container {
+    display: flex;
+    padding-bottom: $mobile-padding-after;
+    padding-top: 1rem;
+    border-bottom: .0625rem solid #E1E1E1;
+
+    @include tablet {
+        padding-bottom: $tablet-padding-after;
+        // padding-left: 2.75rem;
+        // padding-right: 2.75rem;
+    }
+
+    @include desktop {
+        // padding-left: 19rem;
+        // padding-right: 19rem;
+    }
 }
 
 .btn-comment {
@@ -298,6 +429,46 @@
 .comment-form {
     height: 6.75rem;
     width: 100%;
+}
+
+.default-container {
+    display: flex;
+    padding-top: $mobile-padding-after;
+
+    @include tablet {
+        padding-top: $tablet-padding-after;
+    }
+}
+
+.name-date {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.comment-name {
+    padding-left: $mobile-padding-between;
+
+    @include tablet {
+        font-family: "avenir-demi";
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+    }
+}
+
+.comment-date {
+    font-family: "avenir-regular";
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    color: $mercury;
+}
+
+#footer {
+    padding-top: $mobile-padding-after;
+
+    @include tablet {
+        padding-top: $tablet-padding-after;
+    }
 }
 
 .primary-footer {

@@ -76,7 +76,12 @@ iframe {
     }
 }
 
+.tablet-info {
+    color: $mercury;
+}
+
 .show__date {
+    font-family: "avenir-demi";
     width: 11rem;
 }
 
@@ -101,7 +106,18 @@ iframe {
         justify-content: space-between;
         border-bottom: 0.0625rem solid $mercury;
     }
+}
 
+.showtime-container:hover {
+    @include tablet {
+        background-color: $albaster;
+    }
+}
+
+.showtime-container:active {
+    @include tablet {
+        background-color: $mercury;
+    }
 }
 
 .show-text {
@@ -147,7 +163,7 @@ iframe {
 }
 
 .divider {
-    border: 0.0625rem solid $mercury;
+    border: 0.0325rem solid $mercury;
     margin-right: -1rem;
     margin-left: -1rem;
 
@@ -157,6 +173,11 @@ iframe {
 }
 
 .tablet-info {
-    display: flex;
-    justify-content: space-between;
+    display: none;
+
+    @include tablet {
+        padding-top: 1rem;
+        display: flex;
+        justify-content: space-between;
+    }
 }

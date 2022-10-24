@@ -46,7 +46,7 @@ const commentEntriesElement = document.getElementById('comment-entries');
 const currentDate = function () {
     const today = new Date();
     const yyyy = today.getFullYear();
-    let mm = today.getMonth() + 1; // Months start at 0!
+    let mm = today.getMonth() + 1;
     let dd = today.getDate();
 
     if (dd < 10) dd = '0' + dd;
@@ -66,26 +66,39 @@ function renderCommentEntries() {
 
     for (let i = 0; i < commentEntries.length; i++) {
 
+        let commentContainer = document.createElement('div');
+        commentContainer.classList.add("default-container");
+
         let commentListItem = document.createElement('div');
+        commentListItem.classList.add("name-date")
 
-        let commentImage = document.createElement('img');
-
+        let commentAvatar = document.createElement('div');
+        commentAvatar.classList.add("default-avatar");
 
         let commentTitle = document.createElement('h3');
+        commentTitle.classList.add("comment-name");
         commentTitle.innerText = commentEntries[i].title;
 
         let commentDate = document.createElement('h3');
+        commentDate.classList.add("comment-date");
         commentDate.innerText = commentEntries[i].date;
 
         let commentContent = document.createElement('h3');
+        commentContent.classList.add("default-content")
         commentContent.innerText = commentEntries[i].content;
 
+        if (commentEntries[i].date === currentDate()) {
+            commentAvatar.classList.add("avatar-icon");
+        }
 
-
+        commentEntriesElement.appendChild(commentContainer);
+        commentEntriesElement.appendChild(commentAvatar);
         commentListItem.appendChild(commentTitle);
         commentListItem.appendChild(commentDate);
-        commentListItem.appendChild(commentContent);
         commentEntriesElement.appendChild(commentListItem);
+        commentEntriesElement.appendChild(commentContent);
+        commentContainer.appendChild(commentAvatar);
+        commentContainer.appendChild(commentListItem);
     }
 
     console.log(commentEntries);
@@ -98,8 +111,11 @@ commentForm.addEventListener('submit', function (event) {
     if (event.target.title.value === '') {
         alert('please enter a title for the comment post');
         return;
-    } else if (event.target.title.value === '')
-        alert('please enter a content for the comment post');
+    } else if (event.target.content.value === '') {
+        alert('please enter a content for the comment post')
+        return;
+    };
+
 
     const newCommentEntry = {
         title: event.target.title.value,

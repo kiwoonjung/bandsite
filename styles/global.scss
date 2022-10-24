@@ -101,15 +101,6 @@ h6 {
     }
 }
 
-.primary-nav {
-    @include tablet {
-        display: flex;
-        justify-content: space-evenly;
-        width: 50%;
-        align-items: baseline;
-    }
-}
-
 .logo {
     display: flex;
     justify-content: center;
@@ -126,7 +117,7 @@ h6 {
     }
 }
 
-.logo-padding {
+.logo__padding {
     @include tablet {
         padding-bottom: 0.5rem;
     }
@@ -155,6 +146,7 @@ h6 {
     &__link:hover {
         color: #FFFFFF;
         border-bottom: 4px solid #FFFFFF;
+        transition: all 0.5s ease;
     }
 }
 

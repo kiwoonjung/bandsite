@@ -14,15 +14,15 @@
 
     <header class="header">
         <a class="logo" href="./index.html">
-            <img class="logo-padding" src="./assets/Logo/Logo-bandsite.svg" alt="logo">
+            <img class="logo__padding" src="./assets/Logo/Logo-bandsite.svg" alt="logo">
         </a>
 
         <ul class="list">
             <li class="list__item">
-                <a class="list__link list__link--active" href="#">
+                <a class="list__link list__link--active" href="./index.html">
                     <h4>Biography</h4>
                 </a>
-                <a class="list__link" href="#">
+                <a class="list__link" href="./pages/shows.html">
                     <h4>Shows</h4>
                 </a>
             </li>
@@ -100,29 +100,28 @@
                 <img class="primary-photo" src="./assets/Images/Photo-gallery-9.jpg" alt="gallery-9">
             </div>
         </div>
+        <h2 class="comment-title">Join the Conversation</h2>
+    </section>
+    <section class="primary-comment">
 
-        <section>
-            <h2 class="band-title">Join the Conversation</h2>
+        <div class="comment-container">
+            <div class="avatar"></div>
+            <form class="form" id="commentForm">
+                <label class="form__label" for="commentTitle">NAME</label>
+                <input class="form__input" id="commentTitle" name="title" type="text" placeholder="Enter your name">
 
-            <div class="comment-container">
-                <img class="avatar" src="./assets/Images/Mohan-muruge.jpg" alt="avatar">
-                <form class="form" id="commentForm">
-                    <label class="form__label" for="commentTitle">NAME</label>
-                    <input class="form__input" id="commentTitle" name="title" type="text"
-                        placeholder="Enter your name" />
+                <label class="form__label" for="commentContent">COMMENT</label>
+                <textarea class="form__textarea" id="commentContent" name="content"
+                    placeholder="Add a new comment"></textarea>
 
-                    <label class="form__label" for="commentContent">COMMENT</label>
-                    <textarea class="form__textarea" id="commentContent" name="content"
-                        placeholder="Add a new comment"></textarea>
-
-                    <button class="form__button" type="submit">COMMENT</button>
-                </form>
-            </div>
-            <div id="comment-entries"></div>
-            <script src="./scripts/index-page.js"></script>
+                <button class="form__button" type="submit">COMMENT</button>
+            </form>
+        </div>
+        <div id="comment-entries"></div>
+        <script src="./scripts/index-page.js"></script>
 
 
-            <!-- <div class="form-container">
+        <!-- <div class="form-container">
             <h6 class="name-text">NAME</h6>
             <div class="avater-container">
                 <img class="avatar" src="./assets/Images/Mohan-muruge.jpg" alt="avatar">
@@ -138,109 +137,109 @@
             </div>
         </div> -->
 
-        </section>
+    </section>
 
-        <footer>
-            <div class="primary-footer">
-                <div class="footer-container-1">
-                    <div class="footer-header-container">
-                        <p class="footer-header-text">Get In Touch</p>
+    <footer id="footer">
+        <div class="primary-footer">
+            <div class="footer-container-1">
+                <div class="footer-header-container">
+                    <p class="footer-header-text">Get In Touch</p>
 
-                        <ul class="footer-icon">
-                            <li class="footer-icon-list">
-                                <a href="https://www.instagram.com/">
-                                    <img src="./assets/Icons/SVG/Icon-instagram.svg" alt="instagram-icon">
-                                </a>
-                            </li>
+                    <ul class="footer-icon">
+                        <li class="footer-icon-list">
+                            <a href="https://www.instagram.com/">
+                                <img src="./assets/Icons/SVG/Icon-instagram.svg" alt="instagram-icon">
+                            </a>
+                        </li>
 
-                            <li class="footer-icon-list">
-                                <a href="https://www.facebook.com/">
-                                    <img src="./assets/Icons/SVG/Icon-facebook.svg" alt="facebook-icon">
-                                </a>
-                            </li>
+                        <li class="footer-icon-list">
+                            <a href="https://www.facebook.com/">
+                                <img src="./assets/Icons/SVG/Icon-facebook.svg" alt="facebook-icon">
+                            </a>
+                        </li>
 
-                            <li class="footer-icon-list">
-                                <a href="https://twitter.com/">
-                                    <img src="./assets/Icons/SVG/Icon-twitter.svg" alt="twitter-icon">
-                                </a>
-                            </li>
-                        </ul>
+                        <li class="footer-icon-list">
+                            <a href="https://twitter.com/">
+                                <img src="./assets/Icons/SVG/Icon-twitter.svg" alt="twitter-icon">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bottom-logo-container">
+                    <a href="./index.html">
+                        <img class="tablet-bottom-logo" src="./assets/Logo/Logo-bandsite.svg" alt="logo">
+                    </a>
+                </div>
+            </div>
+
+            <div class="primary-footer-container">
+                <div class="footer-text-group">
+                    <div class="footer-text-container">
+                        <h5 class="footer-bold">Cam Admas</h5>
+                        <h5 class="footer-bold">The Bees Knees Management</h5>
                     </div>
 
-                    <div class="bottom-logo-container">
-                        <a href="./index.html">
-                            <img class="tablet-bottom-logo" src="./assets/Logo/Logo-bandsite.svg">
+                    <div class="footer-text-container">
+                        <h5 class="footer-regular">503 Broadway Penthouse,</h5>
+                        <h5 class="footer-regular">New York, NY 10012, USA</h5>
+                    </div>
+
+                    <div class="footer-text-container">
+                        <a href="mailto:info@thebeesknees.com">
+                            <h5 class="footer-regular">info@thebeesknees.com</h5>
                         </a>
                     </div>
                 </div>
 
-                <div class="primary-footer-container">
-                    <div class="footer-text-group">
-                        <div class="footer-text-container">
-                            <h5 class="footer-bold">Cam Admas</h5>
-                            <h5 class="footer-bold">The Bees Knees Management</h5>
-                        </div>
-
-                        <div class="footer-text-container">
-                            <h5 class="footer-regular">503 Broadway Penthouse,</h5>
-                            <h5 class="footer-regular">New York, NY 10012, USA</h5>
-                        </div>
-
-                        <div class="footer-text-container">
-                            <a href="mailto:info@thebeesknees.com">
-                                <h5 class="footer-regular">info@thebeesknees.com</h5>
-                            </a>
-                        </div>
+                <div class="footer-text-group">
+                    <div class="footer-text-container">
+                        <h5 class="footer-bold">Pearl Gregg</h5>
+                        <h5 class="footer-bold">Limitless Artist Group</h5>
                     </div>
 
-                    <div class="footer-text-group">
-                        <div class="footer-text-container">
-                            <h5 class="footer-bold">Pearl Gregg</h5>
-                            <h5 class="footer-bold">Limitless Artist Group</h5>
-                        </div>
-
-                        <div class="footer-text-container">
-                            <h5 class="footer-regular">Booking Agent for</h5>
-                            <h5 class="footer-regular">US / South America / Japan</h5>
-                        </div>
-
-                        <div class="footer-text-container">
-                            <a href="mailto:pearl.gregg@limitlessag.com">
-                                <h5 class="footer-regular">pearl.gregg@limitlessag.com</h5>
-                            </a>
-                        </div>
+                    <div class="footer-text-container">
+                        <h5 class="footer-regular">Booking Agent for</h5>
+                        <h5 class="footer-regular">US / South America / Japan</h5>
                     </div>
 
-                    <div class="footer-text-group">
-                        <div class="footer-text-container">
-                            <h5 class="footer-bold">Carson Whyte</h5>
-                            <h5 class="footer-bold">ARCH Entertainment</h5>
-                        </div>
-
-                        <div class="footer-text-container">
-                            <h5 class="footer-regular">Booking Agent for</h5>
-                            <h5 class="footer-regular">UK / EU / AU</h5>
-                        </div>
-
-                        <div class="footer-text-container">
-                            <a href="mailto:cwhyte@archentertainment.com">
-                                <h5 class="footer-regular">cwhyte@archentertainment.com</h5>
-                            </a>
-                        </div>
+                    <div class="footer-text-container">
+                        <a href="mailto:pearl.gregg@limitlessag.com">
+                            <h5 class="footer-regular">pearl.gregg@limitlessag.com</h5>
+                        </a>
                     </div>
                 </div>
 
-                <div class="footer-logo-container">
-                    <a href="./index.html">
-                        <img class="site-logo-bottom" src="./assets/Logo/Logo-bandsite.svg" alt="logo">
-                    </a>
-                </div>
+                <div class="footer-text-group">
+                    <div class="footer-text-container">
+                        <h5 class="footer-bold">Carson Whyte</h5>
+                        <h5 class="footer-bold">ARCH Entertainment</h5>
+                    </div>
 
-                <div class="footer-text-container">
-                    <h5 class="footer-regular">Copyright The Bees Knees © 2021 All Rights Reserved</h5>
+                    <div class="footer-text-container">
+                        <h5 class="footer-regular">Booking Agent for</h5>
+                        <h5 class="footer-regular">UK / EU / AU</h5>
+                    </div>
+
+                    <div class="footer-text-container">
+                        <a href="mailto:cwhyte@archentertainment.com">
+                            <h5 class="footer-regular">cwhyte@archentertainment.com</h5>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </footer>
+
+            <div class="footer-logo-container">
+                <a href="./index.html">
+                    <img class="site-logo-bottom" src="./assets/Logo/Logo-bandsite.svg" alt="logo">
+                </a>
+            </div>
+
+            <div class="footer-text-container">
+                <h5 class="footer-regular">Copyright The Bees Knees © 2021 All Rights Reserved</h5>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

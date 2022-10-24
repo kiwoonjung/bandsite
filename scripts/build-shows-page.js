@@ -109,7 +109,7 @@ function createShowTimes() {
         const linkText = document.createTextNode("my title text");
         showTimeButton.appendChild(linkText);
         showTimeButton.href = "#";
-        showTimeButton.innerText = "BUY TICKET";
+        showTimeButton.innerText = "BUY TICKETS";
 
         const showTimeDivider = document.createElement('hr');
         showTimeDivider.classList.add("divider")
