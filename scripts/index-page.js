@@ -17,31 +17,6 @@ const commentData = [{
 const commentForm = document.getElementById('commentForm');
 const commentEntriesElement = document.getElementById('comment-entries');
 
-// function createDefultComment() {
-//     commentEntriesElement.innerText = '';
-
-//     for (let i = 0; i < commentData.length; i++) {
-
-//         let commentListItem = document.createElement('div');
-
-//         let commentTitle = document.createElement('h3');
-//         commentTitle.innerText = commentData[i].name;
-
-//         let commentDate = document.createElement('h3');
-//         commentDate.innerText = commentData[i].date;
-
-//         let commentContent = document.createElement('h3');
-//         commentContent.innerText = commentData[i].comment;
-
-//         commentListItem.appendChild(commentTitle);
-//         commentListItem.appendChild(commentDate);
-//         commentListItem.appendChild(commentContent);
-//         commentEntriesElement.appendChild(commentListItem);
-//     }
-// }
-
-// createDefultComment()
-
 
 const currentDate = function () {
     const today = new Date();
@@ -57,8 +32,6 @@ const currentDate = function () {
     return formattedToday;
 }
 
-// const commentForm = document.getElementById('commentForm');
-// const commentEntriesElement = document.getElementById('comment-entries');
 const commentEntries = commentData.map(data => ({ title: data.name, content: data.comment, date: data.date }));
 
 function renderCommentEntries() {

@@ -120,32 +120,25 @@ h6 {
 @media screen and (min-width: 768px) {
   .header {
     display: flex;
-    align-items: flex-end;
+    align-items: baseline;
     padding-top: 1rem;
   }
 }
-
-.logo {
+.header__logo {
   display: flex;
   justify-content: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 @media screen and (min-width: 768px) {
-  .logo {
+  .header__logo {
     padding-left: 2.25rem;
     padding-right: 2.25rem;
   }
 }
 @media screen and (min-width: 1280px) {
-  .logo {
+  .header__logo {
     padding-left: 5rem;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .logo__padding {
-    padding-bottom: 0.5rem;
   }
 }
 
@@ -171,135 +164,131 @@ h6 {
   transition: all 0.5s ease;
 }
 
-.primary-footer {
+.footer {
+  padding-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    padding-top: 2.25rem;
+  }
+}
+.footer__main-container {
   background: #323232;
   padding-top: 1.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
 }
 @media screen and (min-width: 768px) {
-  .primary-footer {
+  .footer__main-container {
     padding-top: 3rem;
     padding-right: 2.25rem;
     padding-left: 2.25rem;
   }
 }
 @media screen and (min-width: 1280px) {
-  .primary-footer {
+  .footer__main-container {
     padding-top: 3rem;
     padding-right: 5rem;
     padding-bottom: 3rem;
     padding-left: 5rem;
   }
 }
-
 @media screen and (min-width: 768px) {
-  .footer-container-1 {
+  .footer__container-1 {
     display: flex;
     align-items: center;
     width: 100%;
     justify-content: space-between;
   }
 }
-
-.footer-header-text {
-  color: #ffffff;
-  font-family: "avenir-demi";
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
-.footer-icon {
-  padding-top: 1rem;
-  display: inline-flex;
-  gap: 2rem;
-}
 @media screen and (min-width: 768px) {
-  .footer-icon {
-    padding-top: 0;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .bottom-logo-container {
-    display: inline-flex;
-    justify-content: flex-end;
-  }
-}
-
-.tablet-bottom-logo {
-  display: none;
-}
-@media screen and (min-width: 768px) {
-  .tablet-bottom-logo {
-    display: flex;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .primary-footer-container {
-    display: flex;
-    gap: 3.5rem;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .footer-header-container {
+  .footer__header {
     display: flex;
     align-items: center;
     gap: 6.9rem;
   }
 }
+.footer__text {
+  color: #FFFFFF;
+  font-family: "avenir-demi";
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.footer__list {
+  padding-top: 1rem;
+  display: inline-flex;
+  gap: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__list {
+    padding-top: 0;
+  }
+}
+.footer__item {
+  list-style: none;
+}
 
 @media screen and (min-width: 768px) {
-  .footer-container-2 {
+  .logo {
+    display: inline-flex;
+    justify-content: flex-end;
+  }
+}
+.logo__bottom {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .logo__bottom {
     display: flex;
   }
 }
 
-.footer-icon-list {
-  list-style: none;
+@media screen and (min-width: 768px) {
+  .footer__second-container {
+    display: flex;
+    gap: 3.5rem;
+  }
 }
 
-.footer-text-container {
+.second-container {
   padding-top: 1rem;
 }
-
-.footer-bold {
+.second-container__text {
+  padding-top: 1rem;
+}
+.second-container__bold {
   color: #ffffff;
   font-family: "avenir-demi";
   font-size: 0.875rem;
   line-height: 1.375rem;
 }
 @media screen and (min-width: 768px) {
-  .footer-bold {
+  .second-container__bold {
     font-size: 0.875rem;
     line-height: 1.375rem;
   }
 }
-
-.footer-regular {
+.second-container__regular {
   color: #ffffff;
   font-family: "avenir-regular";
   font-size: 0.875rem;
   line-height: 1.375rem;
 }
 
-.site-logo-bottom {
+.second-logo {
+  padding-top: 3.5rem;
+}
+@media screen and (min-width: 768px) {
+  .second-logo {
+    padding-top: 1rem;
+  }
+}
+.second-logo__bottom {
   background: #323232;
   height: 1.25rem;
 }
 @media screen and (min-width: 768px) {
-  .site-logo-bottom {
+  .second-logo__bottom {
     display: none;
-  }
-}
-
-.footer-logo-container {
-  padding-top: 3.5rem;
-}
-@media screen and (min-width: 768px) {
-  .footer-logo-container {
-    padding-top: 1rem;
   }
 }/*# sourceMappingURL=global.css.map */

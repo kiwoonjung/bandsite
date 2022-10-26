@@ -1,7 +1,7 @@
 @use './partials/variables' as *;
 @use './partials/mixins' as *;
 
-.hero-image {
+.hero {
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url(../assets/Images/hero-shows.jpg);
@@ -80,22 +80,41 @@ iframe {
     color: $mercury;
 }
 
-.show__date {
-    font-family: "avenir-demi";
-    width: 11rem;
+.show {
+    &__date {
+        font-family: "avenir-demi";
+        width: 11rem;
+    }
+
+    &__venue {
+        width: 12rem;
+    }
+
+    &__location {
+        width: 11rem;
+    }
+
+    &__gap {
+        width: 9.375rem;
+    }
 }
 
-.show__venue {
-    width: 12rem;
-}
+// .show__date {
+//     font-family: "avenir-demi";
+//     width: 11rem;
+// }
 
-.show__location {
-    width: 11rem;
-}
+// .show__venue {
+//     width: 12rem;
+// }
 
-.show__gap {
-    width: 9.375rem;
-}
+// .show__location {
+//     width: 11rem;
+// }
+
+// .show__gap {
+//     width: 9.375rem;
+// }
 
 .showtime-container {
     @include tablet {

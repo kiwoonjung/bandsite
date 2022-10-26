@@ -96,30 +96,24 @@ h6 {
 
     @include tablet {
         display: flex;
-        align-items: flex-end;
+        align-items: baseline;
         padding-top: 1rem;
     }
-}
 
-.logo {
-    display: flex;
-    justify-content: center;
-    padding-top: $mobile-padding-after;
-    padding-bottom: $mobile-padding-after;
+    &__logo {
+        display: flex;
+        justify-content: center;
+        padding-top: $mobile-padding-after;
+        padding-bottom: $mobile-padding-after;
 
-    @include tablet {
-        padding-left: $tablet-padding-after;
-        padding-right: $tablet-padding-after;
-    }
+        @include tablet {
+            padding-left: $tablet-padding-after;
+            padding-right: $tablet-padding-after;
+        }
 
-    @include desktop {
-        padding-left: 5rem;
-    }
-}
-
-.logo__padding {
-    @include tablet {
-        padding-bottom: 0.5rem;
+        @include desktop {
+            padding-left: 5rem;
+        }
     }
 }
 
@@ -152,130 +146,252 @@ h6 {
 
 
 
-.primary-footer {
-    background: $bandsite-black;
-    padding-top: $mobile-padding-before;
-    padding-left: $mobile-padding-between;
-    padding-right: $mobile-padding-between;
-
-    @include tablet {
-        padding-top: 3rem;
-        padding-right: 2.25rem;
-        padding-left: 2.25rem;
-    }
-
-    @include desktop {
-        padding-top: 3rem;
-        padding-right: 5rem;
-        padding-bottom: 3rem;
-        padding-left: 5rem;
-    }
-}
-
-.footer-container-1 {
-
-    @include tablet {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        justify-content: space-between;
-    }
-}
-
-.footer-header-text {
-    color: $primary-text-color;
-    font-family: 'avenir-demi';
-    font-size: 1.5rem;
-    line-height: 2rem;
-}
-
-.footer-icon {
+.footer {
     padding-top: $mobile-padding-after;
-    display: inline-flex;
-    gap: 2rem;
 
     @include tablet {
-        padding-top: 0;
+        padding-top: $tablet-padding-after;
+    }
+
+    &__main-container {
+        background: $bandsite-black;
+        padding-top: $mobile-padding-before;
+        padding-left: $mobile-padding-between;
+        padding-right: $mobile-padding-between;
+
+        @include tablet {
+            padding-top: 3rem;
+            padding-right: 2.25rem;
+            padding-left: 2.25rem;
+        }
+
+        @include desktop {
+            padding-top: 3rem;
+            padding-right: 5rem;
+            padding-bottom: 3rem;
+            padding-left: 5rem;
+        }
+    }
+
+    &__container-1 {
+        @include tablet {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: space-between;
+        }
+    }
+
+    &__header {
+        @include tablet {
+            display: flex;
+            align-items: center;
+            gap: 6.9rem;
+        }
+    }
+
+    &__text {
+        color: $white;
+        font-family: 'avenir-demi';
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    &__list {
+        padding-top: $mobile-padding-after;
+        display: inline-flex;
+        gap: 2rem;
+
+        @include tablet {
+            padding-top: 0;
+        }
+    }
+
+    &__item {
+        list-style: none;
     }
 }
 
-.bottom-logo-container {
+// .footer-icon-list {
+//     list-style: none;
+// }
+
+// .footer__main-container {
+//     background: $bandsite-black;
+//     padding-top: $mobile-padding-before;
+//     padding-left: $mobile-padding-between;
+//     padding-right: $mobile-padding-between;
+
+//     @include tablet {
+//         padding-top: 3rem;
+//         padding-right: 2.25rem;
+//         padding-left: 2.25rem;
+//     }
+
+//     @include desktop {
+//         padding-top: 3rem;
+//         padding-right: 5rem;
+//         padding-bottom: 3rem;
+//         padding-left: 5rem;
+//     }
+// }
+
+// .footer-container-1 {
+
+//     @include tablet {
+//         display: flex;
+//         align-items: center;
+//         width: 100%;
+//         justify-content: space-between;
+//     }
+// }
+
+// .footer-header-container {
+//     @include tablet {
+//         display: flex;
+//         align-items: center;
+//         gap: 6.9rem;
+//     }
+// }
+
+// .footer-header-text {
+//     color: $primary-text-color;
+//     font-family: 'avenir-demi';
+//     font-size: 1.5rem;
+//     line-height: 2rem;
+// }
+
+// .footer-icon {
+//     padding-top: $mobile-padding-after;
+//     display: inline-flex;
+//     gap: 2rem;
+
+//     @include tablet {
+//         padding-top: 0;
+//     }
+// }
+
+.logo {
     @include tablet {
         display: inline-flex;
         justify-content: flex-end;
     }
-}
 
-.tablet-bottom-logo {
-    display: none;
+    &__bottom {
+        display: none;
 
-    @include tablet {
-        display: flex;
+        @include tablet {
+            display: flex;
+        }
     }
 }
 
-.primary-footer-container {
+// .tablet-bottom-logo {
+//     display: none;
 
+//     @include tablet {
+//         display: flex;
+//     }
+// }
+
+
+// .primary-footer-container {
+
+//     @include tablet {
+//         display: flex;
+//         gap: 3.5rem;
+//     }
+// }
+
+.footer__second-container {
     @include tablet {
         display: flex;
         gap: 3.5rem;
     }
 }
 
-.footer-header-container {
-    @include tablet {
-        display: flex;
-        align-items: center;
-        gap: 6.9rem;
-    }
-}
-
-.footer-container-2 {
-    @include tablet {
-        display: flex
-    }
-}
-
-.footer-icon-list {
-    list-style: none;
-}
-
-.footer-text-container {
+.second-container {
     padding-top: $mobile-padding-after;
-}
 
-.footer-bold {
-    color: $primary-text-color;
-    font-family: 'avenir-demi';
-    font-size: 0.875rem;
-    line-height: 1.375rem;
+    &__text {
+        padding-top: $mobile-padding-after;
+    }
 
-    @include tablet {
+    &__bold {
+        color: $primary-text-color;
+        font-family: 'avenir-demi';
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+
+        @include tablet {
+            font-size: 0.875rem;
+            line-height: 1.375rem;
+        }
+    }
+
+    &__regular {
+        color: $primary-text-color;
+        font-family: 'avenir-regular';
         font-size: 0.875rem;
         line-height: 1.375rem;
     }
 }
 
-.footer-regular {
-    color: $primary-text-color;
-    font-family: 'avenir-regular';
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-}
 
-.site-logo-bottom {
-    background: $bandsite-black;
-    height: 1.25rem;
+// .footer-container-2 {
+//     @include tablet {
+//         display: flex
+//     }
+// }
 
-    @include tablet {
-        display: none;
-    }
-}
 
-.footer-logo-container {
+
+// .footer-text-container {
+//     padding-top: $mobile-padding-after;
+// }
+
+// .footer-bold {
+//     color: $primary-text-color;
+//     font-family: 'avenir-demi';
+//     font-size: 0.875rem;
+//     line-height: 1.375rem;
+
+//     @include tablet {
+//         font-size: 0.875rem;
+//         line-height: 1.375rem;
+//     }
+// }
+
+
+// .footer-regular {
+//     color: $primary-text-color;
+//     font-family: 'avenir-regular';
+//     font-size: 0.875rem;
+//     line-height: 1.375rem;
+// }
+
+// .site-logo-bottom {
+//     background: $bandsite-black;
+//     height: 1.25rem;
+
+//     @include tablet {
+//         display: none;
+//     }
+// }
+
+.second-logo {
     padding-top: 3.5rem;
 
     @include tablet {
         padding-top: 1rem;
+    }
+
+    &__bottom {
+        background: $bandsite-black;
+        height: 1.25rem;
+
+        @include tablet {
+            display: none;
+        }
     }
 }

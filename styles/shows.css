@@ -10,7 +10,7 @@
   font-family: "avenir-bold";
   src: url(../assets/Font/AvenirNextLTPro-Bold.otf) format("opentype");
 }
-.hero-image {
+.hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/Images/hero-shows.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -19,27 +19,27 @@
   padding-right: 1rem;
   padding-left: 1rem;
 }
-.hero-image__text {
+.hero__text {
   color: #FFFFFF;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
 @media screen and (min-width: 768px) {
-  .hero-image__text {
+  .hero__text {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
-.hero-image__text-2 {
+.hero__text-2 {
   padding-bottom: 1.5rem;
 }
 @media screen and (min-width: 1280px) {
-  .hero-image__text-2 {
+  .hero__text-2 {
     padding-bottom: 7rem;
   }
 }
 @media screen and (min-width: 768px) {
-  .hero-image {
+  .hero {
     min-height: 73vh;
     font-size: 3.75rem;
     line-height: 4.25rem;
@@ -47,7 +47,7 @@
   }
 }
 @media screen and (min-width: 1280px) {
-  .hero-image {
+  .hero {
     display: flex;
     align-items: center;
     gap: 10.3rem;
@@ -96,15 +96,12 @@
   font-family: "avenir-demi";
   width: 11rem;
 }
-
 .show__venue {
   width: 12rem;
 }
-
 .show__location {
   width: 11rem;
 }
-
 .show__gap {
   width: 9.375rem;
 }
