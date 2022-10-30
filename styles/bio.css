@@ -1,14 +1,17 @@
 @font-face {
-  font-family: "avenir-regular";
-  src: url(../assets/Font/AvenirNextLTPro-Regular.otf) format("opentype");
+  font-family: "Avenir Next";
+  font-weight: 400;
+  src: url(../../assets/Font/AvenirNextLTPro-Regular.otf) format("opentype");
 }
 @font-face {
-  font-family: "avenir-demi";
-  src: url(../assets/Font/AvenirNextLTPro-Demi.otf) format("opentype");
+  font-family: "Avenir Next";
+  font-weight: 600;
+  src: url(../../assets/Font/AvenirNextLTPro-Demi.otf) format("opentype");
 }
 @font-face {
-  font-family: "avenir-bold";
-  src: url(../assets/Font/AvenirNextLTPro-Bold.otf) format("opentype");
+  font-family: "Avenir Next";
+  font-weight: 700;
+  src: url(../../assets/Font/AvenirNextLTPro-Bold.otf) format("opentype");
 }
 .hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/Images/hero-bio.jpg);
@@ -86,7 +89,6 @@
   }
 }
 .body__text-1 {
-  font-family: "avenir-demi";
   line-height: 1.5rem;
   padding-bottom: 0.5rem;
 }
@@ -97,17 +99,12 @@
   }
 }
 .body__text-2 {
-  font-family: "avenir-demi";
   padding-bottom: 1rem;
 }
 @media screen and (min-width: 768px) {
   .body__text-2 {
     padding-bottom: 2.25rem;
   }
-}
-.body__text-3 {
-  font-family: "avenir-regular";
-  font-weight: bold;
 }
 @media screen and (min-width: 1280px) {
   .body__text-3 {
@@ -261,15 +258,19 @@
   width: 100%;
 }
 .form__input {
+  font-family: "Avenir Next";
   height: 2.25rem;
   margin-bottom: 1rem;
   background-color: #fafafa;
   border-radius: 0.25rem;
 }
 .form__textarea {
+  font-family: "Avenir Next";
   height: 6rem;
   margin-bottom: 1rem;
   background-color: #fafafa;
+  resize: none;
+  border-radius: 0.25rem;
 }
 @media screen and (min-width: 768px) {
   .form__textarea {
@@ -277,27 +278,17 @@
   }
 }
 .form .form__label {
-  font-family: "avenir-regular";
+  font-family: "Avenir Next";
+  color: #E1E1E1;
   font-size: 0.625rem;
   line-height: 1.25rem;
-  font-weight: 700;
+  font-weight: 400;
 }
 @media screen and (min-width: 768px) {
   .form .form__label {
     font-size: 0.75rem;
     line-height: 1.25rem;
   }
-}
-.form .form__input:invalid {
-  background-color: ivory;
-  border: none;
-  outline: 2px solid red;
-  border-radius: 5px;
-}
-.form .form__input:focus,
-.form .form__textarea:focus {
-  outline: none !important;
-  border: 1px solid black;
 }
 .form__button {
   color: #FFFFFF;
@@ -314,6 +305,39 @@
     width: 9.375rem;
     justify-self: end;
   }
+}
+
+input::-moz-placeholder {
+  font-family: "Avenir Next";
+  padding-left: 1rem;
+}
+
+input:-ms-input-placeholder {
+  font-family: "Avenir Next";
+  padding-left: 1rem;
+}
+
+input::placeholder {
+  font-family: "Avenir Next";
+  padding-left: 1rem;
+}
+
+textarea::-moz-placeholder {
+  font-family: "Avenir Next";
+  padding-top: 1rem;
+  padding-left: 1rem;
+}
+
+textarea:-ms-input-placeholder {
+  font-family: "Avenir Next";
+  padding-top: 1rem;
+  padding-left: 1rem;
+}
+
+textarea::placeholder {
+  font-family: "Avenir Next";
+  padding-top: 1rem;
+  padding-left: 1rem;
 }
 
 .form__button:hover {
@@ -339,19 +363,26 @@
 }
 
 .default-content {
-  font-family: "avenir-regular";
+  font-family: "Avenir Next";
+  font-weight: 400;
+  font-size: 0.625rem;
+  line-height: 1.25rem;
   padding-left: 3.25rem;
   padding-bottom: 1rem;
   border-bottom: 0.0625rem solid #E1E1E1;
 }
 @media screen and (min-width: 768px) {
   .default-content {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .default-content {
     padding-bottom: 2.25rem;
     padding-left: 3.9rem;
-    font-family: "avenir-regular";
     font-size: 0.813rem;
     line-height: 1.125rem;
-    font-weight: 400;
   }
 }
 
@@ -437,14 +468,12 @@
 }
 @media screen and (min-width: 768px) {
   .comment-name {
-    font-family: "avenir-demi";
     font-size: 0.875rem;
     line-height: 1.375rem;
   }
 }
 
 .comment-date {
-  font-family: "avenir-regular";
   font-size: 0.875rem;
   line-height: 1.375rem;
   color: #E1E1E1;

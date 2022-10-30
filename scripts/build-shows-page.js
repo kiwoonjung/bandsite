@@ -1,46 +1,16 @@
-const showTime = [{
-    date: "Mon Sept 06 2021",
-    venue: "Ronald Lane",
-    location: "San Francisco, CA",
-},
-{
-    date: "Tue Sept 21 2021",
-    venue: "Pier 3 East",
-    location: "San Francisco, CA",
-},
-{
-    date: "Fri Oct 15 2021",
-    venue: "View Lounge",
-    location: "San Francisco, CA",
-},
-{
-    date: "Sat Nov 06 2021",
-    venue: "Hyatt Agency",
-    location: "San Francisco, CA",
-},
-{
-    date: "Fri Nov 26 2021",
-    venue: "Moscow Center",
-    location: "San Francisco, CA",
-},
-{
-    date: "Wed Dec 15 2021",
-    venue: "Press Club",
-    location: "San Francisco, CA",
-}];
+
 
 const showTimeListContainer = document.getElementById('showtime');
 const showMainContainer = document.createElement('div');
-showMainContainer.classList.add("show-container")
+showMainContainer.classList.add("show-container");
+
 const showText = document.createElement('h2');
 showText.classList.add("show-text");
 showText.innerText = "Shows";
 showMainContainer.appendChild(showText);
 
-
 const tabletInfoContainer = document.createElement('li')
 tabletInfoContainer.classList.add("tablet-info");
-// showMainContainer.appendChild(tabletInfoContainer);
 
 const tableDate = document.createElement('h6');
 tableDate.classList.add("show__date");
@@ -72,59 +42,76 @@ showTimeList.appendChild(tabletInfoContainer);
 showMainContainer.appendChild(showTimeList)
 showTimeListContainer.appendChild(showMainContainer);
 
+var options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
+
 function createShowTimes() {
-    showTimeListItem.innerText = '';
 
-    for (let i = 0; i < showTime.length; i++) {
-        const showTimeListItem = document.createElement('li');
-        showTimeListItem.classList.add("showtime-container")
-        showTimeList.appendChild(showTimeListItem);
+    axios
+        .get(`https://project-1-api.herokuapp.com/showdates?api_key=b32af0c2-4c55-44df-ae8a-e19cb3157`)
+        .then(function (response) {
+            console.log(response);
 
-        const showTimeDateList = document.createElement('h6');
-        showTimeDateList.classList.add("h6-mecury");
-        showTimeDateList.innerText = "DATE";
+            const showTime = response.data;
+            showTimeListItem.innerText = '';
 
-        const showTimeDate = document.createElement('h4');
-        showTimeDate.classList = ("show__date")
-        showTimeDate.innerText = showTime[i].date;
+            for (let i = 0; i < showTime.length; i++) {
+                const showTimeListItem = document.createElement('li');
+                showTimeListItem.classList.add("showtime-container")
+                showTimeList.appendChild(showTimeListItem);
 
-        const showTimeVenueList = document.createElement('h6');
-        showTimeVenueList.classList.add("h6-mecury");
-        showTimeVenueList.innerText = "VENUE";
+                const showTimeDateList = document.createElement('h6');
+                showTimeDateList.classList.add("h6-mecury");
+                showTimeDateList.innerText = "DATE";
 
-        const showTimeVenue = document.createElement('h4');
-        showTimeVenue.classList = ("show__venue");
-        showTimeVenue.innerText = showTime[i].venue;
+                const showTimeDate = document.createElement('h4');
+                showTimeDate.classList = ("show__date")
+                showTimeDate.innerText = new Date(showTime[i].date).toDateString();
 
-        const showTimeLocationList = document.createElement('h6');
-        showTimeLocationList.classList.add("h6-mecury");
-        showTimeLocationList.innerText = "LOCATION";
+                const showTimeVenueList = document.createElement('h6');
+                showTimeVenueList.classList.add("h6-mecury");
+                showTimeVenueList.innerText = "VENUE";
 
-        const showTimeLocation = document.createElement('h4');
-        showTimeLocation.classList = ("show__location");
-        showTimeLocation.innerText = showTime[i].location;
+                const showTimeVenue = document.createElement('h4');
+                showTimeVenue.classList = ("show__venue");
+                showTimeVenue.innerText = showTime[i].place;
 
-        const showTimeButton = document.createElement('a');
-        showTimeButton.classList.add("ticket-text")
-        const linkText = document.createTextNode("my title text");
-        showTimeButton.appendChild(linkText);
-        showTimeButton.href = "#";
-        showTimeButton.innerText = "BUY TICKETS";
+                const showTimeLocationList = document.createElement('h6');
+                showTimeLocationList.classList.add("h6-mecury");
+                showTimeLocationList.innerText = "LOCATION";
 
-        const showTimeDivider = document.createElement('hr');
-        showTimeDivider.classList.add("divider")
+                const showTimeLocation = document.createElement('h4');
+                showTimeLocation.classList = ("show__location");
+                showTimeLocation.innerText = showTime[i].location;
+
+                const showTimeButton = document.createElement('a');
+                showTimeButton.classList.add("ticket-text")
+                const linkText = document.createTextNode("my title text");
+                showTimeButton.appendChild(linkText);
+                showTimeButton.href = "#";
+                showTimeButton.innerText = "BUY TICKETS";
+
+                const showTimeDivider = document.createElement('hr');
+                showTimeDivider.classList.add("divider")
 
 
+                showTimeListItem.appendChild(showTimeDateList);
+                showTimeListItem.appendChild(showTimeDate);
+                showTimeListItem.appendChild(showTimeVenueList);
+                showTimeListItem.appendChild(showTimeVenue);
+                showTimeListItem.appendChild(showTimeLocationList);
+                showTimeListItem.appendChild(showTimeLocation);
+                showTimeListItem.appendChild(showTimeButton);
+                showTimeListItem.appendChild(showTimeDivider);
+            }
 
-        showTimeListItem.appendChild(showTimeDateList);
-        showTimeListItem.appendChild(showTimeDate);
-        showTimeListItem.appendChild(showTimeVenueList);
-        showTimeListItem.appendChild(showTimeVenue);
-        showTimeListItem.appendChild(showTimeLocationList);
-        showTimeListItem.appendChild(showTimeLocation);
-        showTimeListItem.appendChild(showTimeButton);
-        showTimeListItem.appendChild(showTimeDivider);
-    }
-}
+            const hoverFunction = document.querySelectorAll('.showtime-container');
+            hoverFunction.forEach(currentList => {
+                currentList.addEventListener('click', event => {
+                    hoverFunction.forEach(currentList => { currentList.removeAttribute('id', 'card__selected') })
+                    currentList.setAttribute('id', 'card__selected')
+                })
+            })
+        })
+};
 
-createShowTimes();
+createShowTimes()

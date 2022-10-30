@@ -82,39 +82,24 @@ iframe {
 
 .show {
     &__date {
-        font-family: "avenir-demi";
         width: 11rem;
+        font-weight: 600;
     }
 
     &__venue {
         width: 12rem;
+        font-weight: 600;
     }
 
     &__location {
         width: 11rem;
+        font-weight: 600;
     }
 
     &__gap {
         width: 9.375rem;
     }
 }
-
-// .show__date {
-//     font-family: "avenir-demi";
-//     width: 11rem;
-// }
-
-// .show__venue {
-//     width: 12rem;
-// }
-
-// .show__location {
-//     width: 11rem;
-// }
-
-// .show__gap {
-//     width: 9.375rem;
-// }
 
 .showtime-container {
     @include tablet {
@@ -133,10 +118,8 @@ iframe {
     }
 }
 
-.showtime-container:active {
-    @include tablet {
-        background-color: $mercury;
-    }
+#card__selected {
+    background-color: $mercury;
 }
 
 .show-text {
@@ -148,6 +131,8 @@ iframe {
 }
 
 .h6-mecury {
+    font-family: 'Avenir Next';
+    font-weight: 400;
     color: $silver;
     padding-top: $mobile-padding-after;
 
@@ -157,7 +142,8 @@ iframe {
 }
 
 .ticket-text {
-    font-family: "avenir-demi";
+    font-family: 'Avenir Next';
+    font-weight: 600;
     font-size: 0.875rem;
     line-height: 1.375rem;
     color: #FFFFFF;

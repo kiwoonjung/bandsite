@@ -1,14 +1,17 @@
 @font-face {
-  font-family: "avenir-regular";
-  src: url(../assets/Font/AvenirNextLTPro-Regular.otf) format("opentype");
+  font-family: "Avenir Next";
+  font-weight: 400;
+  src: url(../../assets/Font/AvenirNextLTPro-Regular.otf) format("opentype");
 }
 @font-face {
-  font-family: "avenir-demi";
-  src: url(../assets/Font/AvenirNextLTPro-Demi.otf) format("opentype");
+  font-family: "Avenir Next";
+  font-weight: 600;
+  src: url(../../assets/Font/AvenirNextLTPro-Demi.otf) format("opentype");
 }
 @font-face {
-  font-family: "avenir-bold";
-  src: url(../assets/Font/AvenirNextLTPro-Bold.otf) format("opentype");
+  font-family: "Avenir Next";
+  font-weight: 700;
+  src: url(../../assets/Font/AvenirNextLTPro-Bold.otf) format("opentype");
 }
 .hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/Images/hero-shows.jpg);
@@ -93,14 +96,16 @@
 }
 
 .show__date {
-  font-family: "avenir-demi";
   width: 11rem;
+  font-weight: 600;
 }
 .show__venue {
   width: 12rem;
+  font-weight: 600;
 }
 .show__location {
   width: 11rem;
+  font-weight: 600;
 }
 .show__gap {
   width: 9.375rem;
@@ -123,10 +128,8 @@
   }
 }
 
-@media screen and (min-width: 768px) {
-  .showtime-container:active {
-    background-color: #E1E1E1;
-  }
+#card__selected {
+  background-color: #E1E1E1;
 }
 
 .show-text {
@@ -139,6 +142,8 @@
 }
 
 .h6-mecury {
+  font-family: "Avenir Next";
+  font-weight: 400;
   color: #AFAFAF;
   padding-top: 1rem;
 }
@@ -149,7 +154,8 @@
 }
 
 .ticket-text {
-  font-family: "avenir-demi";
+  font-family: "Avenir Next";
+  font-weight: 600;
   font-size: 0.875rem;
   line-height: 1.375rem;
   color: #FFFFFF;

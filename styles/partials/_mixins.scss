@@ -1,9 +1,9 @@
 @use 'variables' as *;
 
 @mixin mobile {
-    @media screen and (min-width: $mobile-breakpoint) {
-      @content;
-    }
+  @media screen and (min-width: $mobile-breakpoint) {
+    @content;
+  }
 }
 
 @mixin tablet {
@@ -19,19 +19,19 @@
 }
 
 @font-face {
-  font-family: 'avenir-regular';
-  src: url(../assets/Font/AvenirNextLTPro-Regular.otf)
-  format('opentype');
+  font-family: 'Avenir Next';
+  font-weight: 400;
+  src: url(../../assets/Font/AvenirNextLTPro-Regular.otf) format('opentype');
 }
 
 @font-face {
-  font-family: 'avenir-demi';
-  src: url(../assets/Font/AvenirNextLTPro-Demi.otf)
-  format('opentype');
+  font-family: 'Avenir Next';
+  font-weight: 600;
+  src: url(../../assets/Font/AvenirNextLTPro-Demi.otf) format('opentype');
 }
 
 @font-face {
-  font-family: 'avenir-bold';
-  src: url(../assets/Font/AvenirNextLTPro-Bold.otf)
-  format('opentype');
+  font-family: 'Avenir Next';
+  font-weight: 700;
+  src: url(../../assets/Font/AvenirNextLTPro-Bold.otf) format('opentype');
 }
